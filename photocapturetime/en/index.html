@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="PhotoCaptureTime documentation build"><title>PhotoCaptureTime User Manual</title><style>:root{color-scheme:light dark;--accent:#1769aa;--accent-soft:#e8f3fc;--text:#20252b;--muted:#5d6873;--background:#fff;--surface:#f4f6f8;--rule:#ccd2d8}*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--background)}body{margin:0;color:var(--text);background:var(--background);font:17px/1.58 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.site-header{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.8rem max(1.25rem,calc((100% - 58rem)/2));border-bottom:1px solid var(--rule);background:color-mix(in srgb,var(--background) 94%,transparent);backdrop-filter:blur(12px)}.site-header a{color:var(--text);text-decoration:none}.site-header .brand{font-weight:750}.site-header nav{display:flex;gap:.35rem}.site-header nav a{padding:.28rem .58rem;border-radius:.4rem}.site-header nav a[aria-current="page"]{color:#fff;background:var(--accent)}main{max-width:58rem;margin:0 auto;padding:3rem 2rem 5rem}h1{margin-bottom:.15em;font-size:clamp(2rem,5vw,3.2rem);line-height:1.12}h1+p{color:var(--muted);font-size:1.18rem}h2{margin-top:2.8em;padding-top:.8em;border-top:1px solid var(--rule);color:var(--accent)}h3{margin-top:2.1em;font-size:1.55rem}h4{margin-top:1.7em;font-size:1.18rem}a{color:var(--accent);text-underline-offset:.15em}img{display:block;width:100%;height:auto;margin:1.35rem auto}table{width:100%;border-collapse:collapse;margin:1.25rem 0;font-size:.95em}th,td{border:1px solid var(--rule);padding:.6rem .75rem;text-align:left;vertical-align:top}th{background:var(--surface)}blockquote{margin:1.25rem 0;padding:.8rem 1rem;border-left:.28rem solid var(--accent);background:var(--accent-soft)}blockquote p{margin:0}kbd{border:1px solid var(--rule);border-bottom-width:2px;border-radius:.3rem;padding:.08rem .35rem;background:var(--surface);font:.88em ui-monospace,monospace}code{font-family:ui-monospace,monospace}li+li{margin-top:.25em}@media(max-width:640px){body{font-size:16px}.site-header{padding:.65rem 1rem}main{padding:2rem 1rem 4rem}table{display:block;overflow-x:auto}}@media(prefers-color-scheme:dark){:root{--accent:#69b7f5;--accent-soft:#142e43;--text:#f1f3f5;--muted:#b7c0c8;--background:#17191c;--surface:#24282d;--rule:#444b53}}@media print{@page{size:A4;margin:17mm 16mm 19mm}:root{color-scheme:light;--accent:#1769aa;--accent-soft:#e8f3fc;--text:#171a1e;--muted:#4f5963;--background:#fff;--surface:#f1f3f5;--rule:#bfc5cb}body{font-size:10pt;print-color-adjust:exact;-webkit-print-color-adjust:exact}.site-header{display:none}main{max-width:none;margin:0;padding:0}h1{font-size:27pt;margin-top:18mm}h2{break-before:page;margin-top:0;padding-top:0;border-top:0}h3,h4{break-after:avoid}table,blockquote,img{break-inside:avoid}a{color:inherit;text-decoration:none}img{max-height:95mm;object-fit:contain}}
+</style></head>
+<body><header class="site-header"><a class="brand" href="#top">PhotoCaptureTime</a><nav aria-label="Language selection"><a href="../de/index.html" lang="de" hreflang="de">Deutsch</a><a href="index.html" lang="en" hreflang="en" aria-current="page">English</a></nav></header><main id="top">
+<h1>PhotoCaptureTime User Manual</h1>
+<p>Rename photo files using their reliable components</p>
+<h2>Table of Contents</h2>
+<ul>
+<li><strong>Part 1 · Introduction</strong><ul>
+<li><a href="#overview">1.1 About PhotoCaptureTime</a></li>
+<li><a href="#quick-start">1.2 Quick Start</a></li>
+</ul>
+</li>
+<li><strong>Part 2 · Preparing Files</strong><ul>
+<li><a href="#load-files">2.1 Loading Files and Folders</a></li>
+<li><a href="#camera-groups">2.2 Camera Groups and Selection</a></li>
+<li><a href="#search-filter">2.3 Searching and Filtering</a></li>
+</ul>
+</li>
+<li><strong>Part 3 · Composing Names</strong><ul>
+<li><a href="#number-blocks">3.1 Keeping Number Blocks</a></li>
+<li><a href="#name-components">3.2 New Name Blocks</a></li>
+<li><a href="#edit-components">3.3 Editing Blocks</a></li>
+<li><a href="#focus-images">3.4 Finished Focus Images</a></li>
+</ul>
+</li>
+<li><strong>Part 4 · Reviewing and Renaming</strong><ul>
+<li><a href="#status-symbols">4.1 Status Symbols</a></li>
+<li><a href="#name-conflicts">4.2 Name Conflicts</a></li>
+<li><a href="#rename-undo">4.3 Renaming and Undo</a></li>
+</ul>
+</li>
+<li><strong>Part 5 · Help and Reference</strong><ul>
+<li><a href="#metadata-formats">5.1 Metadata and Formats</a></li>
+<li><a href="#appearance-privacy">5.2 Appearance and Privacy</a></li>
+<li><a href="#faq">5.3 Frequently Asked Questions</a></li>
+<li><a href="#copyright-trademarks">5.4 Copyright and Trademarks</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>Part 1 · Introduction</h2>
+<p><a id="overview"></a></p>
+<h3>1.1 About PhotoCaptureTime</h3>
+<p>PhotoCaptureTime gives large photo collections consistent names based on capture date, capture time, camera, and image number. The preview shows the current and proposed name side by side for every file. Files on disk are renamed only after you confirm.</p>
+<p><a id="rename-principle"></a></p>
+<h4>The Distinctive Approach</h4>
+<p>The app deliberately works differently from Find and Replace. You choose the number block in the existing name that should be preserved as the image number. PhotoCaptureTime then rebuilds the date, time, camera code, separators, and custom text.</p>
+<p><img src="images/rename-principle.svg" alt="The renaming principle: the 00147 image-number block is retained from the old filename and combined with date, time, and camera to form a new name."></p>
+<blockquote>
+<p><strong>Note:</strong> Irregular prefixes, editing suffixes, or old date formats do not have to be replaced individually. Only the number block you want to preserve matters.</p>
+</blockquote>
+<p><a id="quick-start"></a></p>
+<h3>1.2 Quick Start</h3>
+<ol>
+<li>Add image files or a folder.</li>
+<li>Select a representative file in a camera group.</li>
+<li>Set the image number under <strong>Detected Number Blocks</strong>.</li>
+<li>Arrange the <strong>New Name Blocks</strong>.</li>
+<li>Review the names and status symbols.</li>
+<li>Choose the scope and confirm <strong>Rename Files</strong>.</li>
+</ol>
+<h2>Part 2 · Preparing Files</h2>
+<p><a id="load-files"></a></p>
+<h3>2.1 Loading Files and Folders</h3>
+<p><strong>Add Files or Folder</strong> lets you load individual images, multiple files, or entire folders. <strong>Include Subfolders</strong> extends the search to folders below the selected folder. Analysis runs in the background, and the interface remains usable while it runs.</p>
+<p>The source list on the left shows the loaded folders and file counts. A source can be removed using its context menu. <strong>Clear List</strong> removes only the entries from PhotoCaptureTime; it does not delete image files.</p>
+<p><a id="camera-groups"></a></p>
+<h3>2.2 Camera Groups and Selection</h3>
+<p>PhotoCaptureTime reads the camera model from the metadata and groups matching files. The arrow expands or collapses a group. The <strong>Code</strong> field sets the short camera identifier in the new filename, such as <strong>R6</strong> or <strong>IP15</strong>.</p>
+<p>Click to select a file. <kbd>Command</kbd>-click adds or removes individual files, and <kbd>Shift</kbd>-click selects a continuous range. The button on the right side of the group header selects the entire group or clears its selection.</p>
+<p>If a camera model is missing or was detected incorrectly, click the active camera block under <strong>New Name Blocks</strong>. You can edit the model and code there.</p>
+<p><a id="search-filter"></a></p>
+<h3>2.3 Searching and Filtering</h3>
+<p>The search field filters the current filename. The status menu filters by <strong>Review</strong>, <strong>Ready</strong>, <strong>Already Correct</strong>, or <strong>Conflict Resolved</strong>. Both filters work together.</p>
+<p><strong>Conflict Resolved</strong> shows the complete conflict group: the file with the original target name and every related file that received a numbered suffix.</p>
+<h2>Part 3 · Composing Names</h2>
+<p><a id="number-blocks"></a></p>
+<h3>3.1 Keeping Number Blocks</h3>
+<p>PhotoCaptureTime splits the selected file&#39;s name into number blocks and classifies recognizable components such as date, time, and camera. Use a block&#39;s menu to decide what should be preserved.</p>
+<table>
+<thead>
+<tr>
+<th>Selection</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Keep as Primary Number</strong></td>
+<td>This block becomes the primary image number for the camera group.</td>
+</tr>
+<tr>
+<td><strong>Keep as Additional Required Block</strong></td>
+<td>Multiple numeric parts together form the identifier.</td>
+</tr>
+<tr>
+<td><strong>Keep as Optional</strong></td>
+<td>The part is preserved, but it may be absent from other files.</td>
+</tr>
+<tr>
+<td><strong>Entire Block</strong></td>
+<td>For mixed identifiers, associated letters are preserved as well.</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Important:</strong> Choose a file with a representative name structure. The <strong>Review</strong> filter will then show the exceptions.</p>
+</blockquote>
+<p><a id="name-components"></a></p>
+<h3>3.2 New Name Blocks</h3>
+<p>The upper row shows the future name structure. Drag blocks to a visible insertion point or onto the left or right half of an existing block. The new block is placed before or after it accordingly.</p>
+<p><img src="images/component-movement.svg" alt="Blocks can be moved between the target name and tray and inserted at an insertion point in the target name."></p>
+<p>Drag an active block into <strong>Additions for Selected Files</strong> to return it from the target name. This tray also contains text blocks as well as underscore, hyphen, and space separators.</p>
+<p>Double-clicking a separator template applies it to every gap. Dragging places it at only one position.</p>
+<p><a id="edit-components"></a></p>
+<h3>3.3 Editing Blocks</h3>
+<p>Click an active block to edit it. Several formats are available for date and time. The camera block lets you adjust the model and code. Custom text can be used as a prefix, label, or freely chosen name component.</p>
+<p>Custom text applies to the current file selection. This lets you add labels such as <strong>HDR</strong> or <strong>ISO-HDR</strong> only to selected images without changing the rest of the structure.</p>
+<p><a id="focus-images"></a></p>
+<h3>3.4 Finished Focus Images</h3>
+<p>The label for a finished focus-composited image appears only when PhotoCaptureTime can derive the series number from the currently selected folder and the finished image is included in the visible file list.</p>
+<p><a id="focus-folder-selection"></a></p>
+<h4>Required Folder Selection</h4>
+<p><img src="images/focus-folder-structure.svg" alt="Required folder selection for a focus series: select the parent folder and include subfolders."></p>
+<ol>
+<li>Add the parent folder with its complete structure.</li>
+<li>Select the parent folder on the left - not the <strong>Final</strong> subfolder.</li>
+<li>Enable <strong>Include Subfolders</strong>. This also makes files from <strong>Working Files</strong> and <strong>Final</strong> visible.</li>
+<li>The selected folder name must contain <strong>Fokusreihe</strong> or <strong>Fokusstapel</strong> and a number, for example <strong>2026-05-25 Fokusreihe 07</strong>.</li>
+<li>Select the finished composite image and click <strong>Assign Stack07_Final</strong>.</li>
+</ol>
+<blockquote>
+<p><strong>Important:</strong> If you select the <strong>Final</strong> subfolder directly, PhotoCaptureTime can no longer read the series number from the selected folder name. A parent folder named only <strong>2026-05-25</strong> is currently not sufficient for automatic labeling either.</p>
+</blockquote>
+<p>After assignment, <strong>Stack07_Final</strong> is used instead of the regular image number. The assignment applies only to the selected files and can be cleared with <strong>Remove Assignment</strong>.</p>
+<h2>Part 4 · Reviewing and Renaming</h2>
+<p><a id="status-symbols"></a></p>
+<h3>4.1 Status Symbols</h3>
+<table>
+<thead>
+<tr>
+<th>Symbol/color</th>
+<th>Status</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>→ Blue</td>
+<td><strong>Ready to Rename</strong></td>
+<td>The new name differs from the current one.</td>
+</tr>
+<tr>
+<td>✓ Green</td>
+<td><strong>Already Named Correctly</strong></td>
+<td>No change is required.</td>
+</tr>
+<tr>
+<td>! Orange</td>
+<td><strong>Review or Complete Details</strong></td>
+<td>A required detail is incomplete or ambiguous.</td>
+</tr>
+<tr>
+<td>× Red</td>
+<td><strong>Image Number Not Found</strong></td>
+<td>The number structure does not match this file.</td>
+</tr>
+<tr>
+<td>▣ Blue</td>
+<td><strong>Name Conflict Resolved Automatically</strong></td>
+<td>The target name received an <strong>_1</strong>, <strong>_2</strong>, and so on suffix.</td>
+</tr>
+</tbody></table>
+<p>This overview also appears on the right below the metadata. The detail view additionally shows the proposed name, camera model, code, and capture time of the selected file.</p>
+<p><a id="name-conflicts"></a></p>
+<h3>4.2 Name Conflicts</h3>
+<p>If files in the same folder would receive the same target name, PhotoCaptureTime orders them using available modification and file dates. One file keeps the base name; the others receive <strong>_1</strong>, <strong>_2</strong>, and so on.</p>
+<p>The blue symbol marks only names with an added suffix. The filter still shows all conflict partners together.</p>
+<blockquote>
+<p><strong>Note:</strong> Use the <strong>Conflict Resolved</strong> filter to review all involved files together.</p>
+</blockquote>
+<p><a id="rename-undo"></a></p>
+<h3>4.3 Renaming and Undo</h3>
+<p>At the bottom right, choose the scope: <strong>Selected Files</strong>, <strong>Current Camera Group</strong>, or <strong>All Ready Files</strong>. PhotoCaptureTime first shows a summary with the number of files, skipped files, and conflicts.</p>
+<p><strong>Undo Last Rename</strong> is available after an operation. If possible, use it immediately before files are moved or renamed again outside the app.</p>
+<h2>Part 5 · Help and Reference</h2>
+<p><a id="metadata-formats"></a></p>
+<h3>5.1 Metadata and Formats</h3>
+<p>PhotoCaptureTime prefers the original EXIF capture date. If it is missing, the app checks other embedded dates and finally file-system dates. The metadata view shows the available values.</p>
+<p><a id="supported-formats"></a></p>
+<h4>Supported Formats</h4>
+<ul>
+<li><strong>Standard images:</strong> JPEG, HEIC, HEIF, TIFF, and PNG.</li>
+<li><strong>Camera RAW:</strong> 3FR, ARW, CR2, CR3, CRW, DCR, DNG, ERF, FFF, GPR, IIQ, K25, KDC, MEF, MOS, MRW, NEF, NRW, ORF, ORI, PEF, RAF, RAW, RW2, RWL, SR2, SRF, SRW, and X3F.</li>
+</ul>
+<blockquote>
+<p><strong>Important:</strong> Which previews and embedded metadata can be read also depends on whether the installed macOS version supports the specific camera model and its RAW variant. If EXIF data is missing, PhotoCaptureTime can still use file-system dates and existing number blocks.</p>
+</blockquote>
+<p><a id="appearance-privacy"></a></p>
+<h3>5.2 Appearance and Privacy</h3>
+<p>Under <strong>PhotoCaptureTime → Settings</strong>, you can change the neutral gray level and accent color. This affects only the appearance, not filenames.</p>
+<p><a id="privacy"></a></p>
+<h4>Privacy</h4>
+<p>Analysis and renaming take place locally on your Mac. Images and metadata are not sent to an online service.</p>
+<p><a id="faq"></a></p>
+<h3>5.3 Frequently Asked Questions</h3>
+<p><a id="faq-number-blocks"></a></p>
+<h4>Why are date parts shown as number blocks?</h4>
+<p>The app shows every number in the old name. The label helps classify it; only your selection determines which image number is preserved.</p>
+<p><a id="faq-orange-status"></a></p>
+<h4>Why is a file marked in orange?</h4>
+<p>Orange means <strong>review or complete details</strong>. Names that already match carry a green checkmark.</p>
+<p><a id="faq-numbered-suffix"></a></p>
+<h4>Why is a numbered suffix added?</h4>
+<p>Otherwise, multiple files would receive the same target name. The suffix prevents overwriting.</p>
+<p><a id="faq-missing-filter-result"></a></p>
+<h4>Why is a file missing from the filter?</h4>
+<p>Also check the search field. The search term and status filter apply at the same time.</p>
+<p><a id="faq-open-manual"></a></p>
+<h4>Where can I open this manual?</h4>
+<p>Choose <strong>Help → PhotoCaptureTime Help</strong> or press <kbd>Command-?</kbd>.</p>
+<p><a id="copyright-trademarks"></a></p>
+<h3>5.4 Copyright and Trademarks</h3>
+<p>© 2026 Markus Ball. All rights reserved.</p>
+<p>PhotoCaptureTime and this user manual may not be reproduced, modified, or redistributed without the prior permission of the copyright holder, except where expressly permitted by law.</p>
+<p>Apple, macOS, iPhone, HEIC, and other Apple product names mentioned are trademarks of Apple Inc. Other product and company names mentioned may be trademarks of their respective owners.</p>
+
+</main></body></html>
