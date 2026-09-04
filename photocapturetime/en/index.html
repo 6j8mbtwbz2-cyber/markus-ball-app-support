@@ -1,7 +1,21 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="PhotoCaptureTime documentation build"><title>PhotoCaptureTime User Manual</title><style>:root{color-scheme:light dark;--accent:#1769aa;--accent-soft:#e8f3fc;--text:#20252b;--muted:#5d6873;--background:#fff;--surface:#f4f6f8;--rule:#ccd2d8}*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--background)}body{margin:0;color:var(--text);background:var(--background);font:17px/1.58 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.site-header{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.8rem max(1.25rem,calc((100% - 58rem)/2));border-bottom:1px solid var(--rule);background:color-mix(in srgb,var(--background) 94%,transparent);backdrop-filter:blur(12px)}.site-header a{color:var(--text);text-decoration:none}.site-header .brand{font-weight:750}.site-header nav{display:flex;gap:.35rem}.site-header nav a{padding:.28rem .58rem;border-radius:.4rem}.site-header nav a[aria-current="page"]{color:#fff;background:var(--accent)}main{max-width:58rem;margin:0 auto;padding:3rem 2rem 5rem}h1{margin-bottom:.15em;font-size:clamp(2rem,5vw,3.2rem);line-height:1.12}h1+p{color:var(--muted);font-size:1.18rem}h2{margin-top:2.8em;padding-top:.8em;border-top:1px solid var(--rule);color:var(--accent)}h3{margin-top:2.1em;font-size:1.55rem}h4{margin-top:1.7em;font-size:1.18rem}a{color:var(--accent);text-underline-offset:.15em}img{display:block;width:100%;height:auto;margin:1.35rem auto}table{width:100%;border-collapse:collapse;margin:1.25rem 0;font-size:.95em}th,td{border:1px solid var(--rule);padding:.6rem .75rem;text-align:left;vertical-align:top}th{background:var(--surface)}blockquote{margin:1.25rem 0;padding:.8rem 1rem;border-left:.28rem solid var(--accent);background:var(--accent-soft)}blockquote p{margin:0}kbd{border:1px solid var(--rule);border-bottom-width:2px;border-radius:.3rem;padding:.08rem .35rem;background:var(--surface);font:.88em ui-monospace,monospace}code{font-family:ui-monospace,monospace}li+li{margin-top:.25em}@media(max-width:640px){body{font-size:16px}.site-header{padding:.65rem 1rem}main{padding:2rem 1rem 4rem}table{display:block;overflow-x:auto}}@media(prefers-color-scheme:dark){:root{--accent:#69b7f5;--accent-soft:#142e43;--text:#f1f3f5;--muted:#b7c0c8;--background:#17191c;--surface:#24282d;--rule:#444b53}}@media print{@page{size:A4;margin:17mm 16mm 19mm}:root{color-scheme:light;--accent:#1769aa;--accent-soft:#e8f3fc;--text:#171a1e;--muted:#4f5963;--background:#fff;--surface:#f1f3f5;--rule:#bfc5cb}body{font-size:10pt;print-color-adjust:exact;-webkit-print-color-adjust:exact}.site-header{display:none}main{max-width:none;margin:0;padding:0}h1{font-size:27pt;margin-top:18mm}h2{break-before:page;margin-top:0;padding-top:0;border-top:0}h3,h4{break-after:avoid}table,blockquote,img{break-inside:avoid}a{color:inherit;text-decoration:none}img{max-height:95mm;object-fit:contain}}
+
+.site-header .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.site-header .brand img {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  border-radius: 50%;
+  box-shadow: 0 2px 7px #0004;
+}
 </style></head>
-<body><header class="site-header"><a class="brand" href="#top">PhotoCaptureTime</a><nav aria-label="Language selection"><a href="../de/index.html" lang="de" hreflang="de">Deutsch</a><a href="index.html" lang="en" hreflang="en" aria-current="page">English</a></nav></header><main id="top">
+<body><header class="site-header"><a class="brand" href="#top"><img src="images/photocapturetime-logo.png" alt="">PhotoCaptureTime</a><nav aria-label="Language selection"><a href="../de/index.html" lang="de" hreflang="de">Deutsch</a><a href="index.html" lang="en" hreflang="en" aria-current="page">English</a></nav></header><main id="top">
 <h1>PhotoCaptureTime User Manual</h1>
 <p>Rename photo files using their reliable components</p>
 <h2>Table of Contents</h2>
@@ -46,7 +60,7 @@
 <p><a id="rename-principle"></a></p>
 <h4>The Distinctive Approach</h4>
 <p>The app deliberately works differently from Find and Replace. You choose the number block in the existing name that should be preserved as the image number. PhotoCaptureTime then rebuilds the date, time, camera code, separators, and custom text.</p>
-<p><img src="images/rename-principle.svg" alt="The renaming principle: the 00147 image-number block is retained from the old filename and combined with date, time, and camera to form a new name."></p>
+<p><img src="images/rename-example.png" alt="Renaming example: PhotoCaptureTime removes an unwanted editing suffix from the existing filename and creates the cleaned new filename."></p>
 <blockquote>
 <p><strong>Note:</strong> Irregular prefixes, editing suffixes, or old date formats do not have to be replaced individually. Only the number block you want to preserve matters.</p>
 </blockquote>
@@ -108,7 +122,7 @@
 <p><a id="name-components"></a></p>
 <h3>3.2 New Name Blocks</h3>
 <p>The upper row shows the future name structure. Drag blocks to a visible insertion point or onto the left or right half of an existing block. The new block is placed before or after it accordingly.</p>
-<p><img src="images/component-movement.svg" alt="Blocks can be moved between the target name and tray and inserted at an insertion point in the target name."></p>
+<p><img src="images/name-blocks.png" alt="The New Name Blocks area with capture date, capture time, camera code and image number, plus the available HDR and ISO-HDR additions."></p>
 <p>Drag an active block into <strong>Additions for Selected Files</strong> to return it from the target name. This tray also contains text blocks as well as underscore, hyphen, and space separators.</p>
 <p>Double-clicking a separator template applies it to every gap. Dragging places it at only one position.</p>
 <p><a id="edit-components"></a></p>
@@ -120,7 +134,7 @@
 <p>The label for a finished focus-composited image appears only when PhotoCaptureTime can derive the series number from the currently selected folder and the finished image is included in the visible file list.</p>
 <p><a id="focus-folder-selection"></a></p>
 <h4>Required Folder Selection</h4>
-<p><img src="images/focus-folder-structure.svg" alt="Required folder selection for a focus series: select the parent folder and include subfolders."></p>
+<p><img src="images/focus-folders.png" alt="Required folder selection for a focus series: include subfolders, select the parent Focus Series folder and keep the Final folder visible."></p>
 <ol>
 <li>Add the parent folder with its complete structure.</li>
 <li>Select the parent folder on the left - not the <strong>Final</strong> subfolder.</li>
