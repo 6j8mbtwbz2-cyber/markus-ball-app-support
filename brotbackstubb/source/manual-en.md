@@ -40,7 +40,7 @@ Your own card **My Setup** calculates rye flour, water, and water temperature fo
 
 The assistant guides you through the recipe in up to eight steps, depending on the selected ingredients. You can switch between pages using **Continue** and **Previous**. When editing, **Save Changes** saves the existing recipe; you can create a copy using **More Options**.
 
-1. Set the name and desired weight of the finished bread.
+1. Set the name, number of loaves, and desired finished weight of each loaf.
 2. Select one to three flour types and distribute their percentages to a total of 100%.
 3. Check the automatically recommended rye, wheat, or spelt sourdough starter, and adjust it if offered.
 4. Select grains, seeds, nuts, and spices.
@@ -48,6 +48,14 @@ The assistant guides you through the recipe in up to eight steps, depending on t
 6. Determine the total salt content.
 7. Verify the calculated base.
 8. Write a recipe description or use a suggestion.
+
+### Baking Multiple Loaves at Once
+
+In the first assistant step, set the **number of loaves** and the **finished weight per loaf** separately. For four 1,000 g loaves, BrotBackstubb therefore calculates all ingredients for a total finished yield of 4,000 g. Sourdough, pre-soak, main-dough water, salt, yeast, and all other ingredients scale together for the complete batch.
+
+> **Baking time and temperature:** The baking profile continues to use the weight of one loaf, not the total batch weight. Four 1,000 g loaves baked together therefore use the same baking profile as one 1,000 g loaf. This assumes that all loaves fit in the oven at the same time and that the oven is suitable for that load.
+
+During **Pre-shape and shape**, the app states the number of portions and the approximate dough weight of each portion. The planned work time uses the recipe's base time for the first loaf - 10 minutes by default - plus 3 minutes for every additional loaf. For example, the app plans 19 minutes for four loaves and 37 minutes for ten loaves.
 
 ### Flours and the default water factor
 
@@ -114,15 +122,15 @@ The description does not change the calculation. You can write it yourself, use 
 
 ### Calculated recipe values
 
-BrotBackstubb scales all amounts to the desired final weight and takes into account the baking loss. The following values are shown, among others: flour amount, dough weight, dough yield, sourdough guide, pre-dough, salt, yeast, target dough temperature, proof temperature, and the baking profile that depends on the bread type and size.
+BrotBackstubb scales all amounts to the number and desired finished weight of the loaves and takes baking loss into account. The displayed values include total dough weight, the number and approximate weight of the dough portions, finished weight per loaf, flour amount, dough yield, sourdough method, pre-soak, salt, yeast, target dough temperature, proofing, and the baking profile determined by the bread type and the weight of one loaf.
 
-> **Preheat Time:** Preheat your oven to the highest temperature and prepare a suitable steam source for your device. The first ten minutes of steam are part of the total baking time. After that, the steam phase ends, and the temperature is lowered according to the calculated baking profile.
+> **Baking time:** Preheat your oven with top and bottom heat and prepare a suitable way to add steam. The first ten minutes with steam are part of the stated total baking time. After that, end the steam phase and lower the temperature according to the calculated baking profile.
 
 The method of generating steam depends on your oven and equipment. Options include an integrated moisture function or a suitable steam source. Always refer to your device's manual. The app intentionally does not specify a particular oven program, vessel, or material.
 
 ### PDF and Mela
 
-**PDF** produces a readable recipe format with ingredients, calculated quantities, and workflow. sourdough, sourdough testing, and an existing brew or water proof appear in their actual chronological order. **Mela** transfers the same calculated quantities and instructions into a format suitable for the Mela Recipe App. In this case, rye, wheat, and spelt sourdough are clearly distinguished. After importing, check if the target app has correctly retained all formatting.
+**PDF** produces a readable recipe with ingredients, calculated quantities, and workflow. For multiple loaves, it states the loaf count, finished weight per loaf, and how to portion the total dough. Sourdough, the sourdough check, and an existing scald or soaker appear in their actual chronological order. **Mela** transfers the same calculated quantities and instructions into a structure suitable for the Mela Recipe App. Rye, wheat, and spelt sourdough are clearly distinguished. After importing, check whether the target app retained all formatting as expected.
 
 ### Ingredient List
 
@@ -175,6 +183,8 @@ If the sourdough is not yet proofed, **Not Proofed · 30 Mins Longer** extends t
 ### Learn Work Times
 
 The sourdough check, main dough preparation, kneading, and shaping can be measured. If the actual duration is significantly different from the plan, the app asks if the new value should be used for future baking days of this recipe.
+
+For multiple loaves, the app learns the shaping base time for the first loaf. It continues to add 3 minutes for every additional loaf. This prevents a measured total time from being multiplied by the loaf count again on a later baking day.
 
 - **Accept:** The ongoing baking day and future plans will use the new recipe value.
 - **Do not accept:** Only the ongoing baking day considers the actual duration; the previous recipe value is retained for the next time.

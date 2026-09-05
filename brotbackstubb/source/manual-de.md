@@ -40,7 +40,7 @@ Die eigene Karte **Mein Anstellgut** berechnet Roggenmehl, Wasser und Wassertemp
 
 Der Assistent führt abhängig von den ausgewählten Zutaten in bis zu acht Schritten durch das Rezept. Mit **Weiter** und **Zurück** wechselst du zwischen den Seiten. Beim Bearbeiten speichert **Änderungen speichern** das bestehende Rezept; über **Weitere Optionen** kannst du eine Kopie anlegen.
 
-1. Name und gewünschtes Gewicht des fertig gebackenen Brotes festlegen.
+1. Name, Anzahl der Brote und gewünschtes Gewicht jedes fertig gebackenen Brotes festlegen.
 2. Eine bis drei Mehlsorten auswählen und deren Anteile auf insgesamt 100 % verteilen.
 3. Die automatisch empfohlene Roggen-, Weizen- oder Dinkelsauerteigführung prüfen und – soweit angeboten – anpassen.
 4. Schrot, Körner, Saaten, Nüsse und Gewürze auswählen.
@@ -48,6 +48,14 @@ Der Assistent führt abhängig von den ausgewählten Zutaten in bis zu acht Schr
 6. Den Gesamtsalzgehalt bestimmen.
 7. Die berechnete Grundlage prüfen.
 8. Eine Rezeptbeschreibung verfassen oder einen Vorschlag einsetzen.
+
+### Mehrere Brote gleichzeitig backen
+
+Im ersten Schritt des Assistenten legst du die **Anzahl der Brote** und das **Fertiggewicht je Brot** getrennt fest. Bei vier Broten zu je 1.000 g berechnet BrotBackstubb deshalb die Zutaten für insgesamt 4.000 g fertiges Brot. Sauerteig, Vorstück, Hauptteigwasser, Salz, Hefe und alle weiteren Zutaten werden gemeinsam auf die vollständige Charge skaliert.
+
+> **Backzeit und Backtemperatur:** Das Backprofil richtet sich weiterhin nach dem Gewicht eines einzelnen Brotes, nicht nach dem Gesamtgewicht der Charge. Vier gleichzeitig gebackene Brote zu je 1.000 g erhalten daher dasselbe Backprofil wie ein einzelnes Brot zu 1.000 g. Voraussetzung ist, dass die Brote gleichzeitig in den Ofen passen und der Ofen für diese Belegung geeignet ist.
+
+Beim Schritt **Rundwirken und formen** nennt die App die Anzahl der Portionen und das ungefähre Teiggewicht je Portion. Die geplante Arbeitszeit beträgt für das erste Brot den im Rezept hinterlegten Grundwert - standardmäßig 10 Minuten - und zusätzlich 3 Minuten für jedes weitere Brot. Damit plant die App beispielsweise 19 Minuten für vier und 37 Minuten für zehn Brote.
 
 ### Mehle und Wasseraufnahme
 
@@ -110,7 +118,7 @@ Die Beschreibung verändert keine Berechnung. Du kannst sie selbst schreiben, ei
 
 ### Berechnete Rezeptwerte
 
-BrotBackstubb skaliert alle Mengen auf das gewünschte Fertiggewicht und berücksichtigt dabei den Backverlust. Angezeigt werden unter anderem Mehlmenge, Teiggewicht, Teigausbeute, Sauerteigführung, Vorstück, Salz, Hefe, Zielteigtemperatur, Stückgare sowie das von Brotart und Brotgröße abhängige Backprofil.
+BrotBackstubb skaliert alle Mengen auf Anzahl und gewünschtes Fertiggewicht der Brote und berücksichtigt dabei den Backverlust. Angezeigt werden unter anderem Gesamtteiggewicht, Anzahl und ungefähres Gewicht der Teiglinge, Fertiggewicht je Brot, Mehlmenge, Teigausbeute, Sauerteigführung, Vorstück, Salz, Hefe, Zielteigtemperatur, Stückgare sowie das von Brotart und Gewicht eines einzelnen Brotes abhängige Backprofil.
 
 > **Backzeit:** Heize den Backofen mit Ober-/Unterhitze vor und bereite eine für dein Gerät geeignete Möglichkeit zum Schwaden vor. Die ersten zehn Minuten mit Dampf sind Bestandteil der angegebenen Gesamtbackzeit. Anschließend wird die Dampfphase beendet und die Temperatur entsprechend dem berechneten Backprofil abgesenkt.
 
@@ -118,7 +126,7 @@ Wie der Dampf erzeugt wird, hängt vom Backofen und der eigenen Ausstattung ab. 
 
 ### PDF und Mela
 
-**PDF** erzeugt eine lesbare Rezeptfassung mit Zutaten, berechneten Mengen und Arbeitsablauf. Sauerteig, Sauerteigprüfung und ein vorhandenes Brüh- oder Quellstück erscheinen in ihrer tatsächlichen zeitlichen Reihenfolge. **Mela** übergibt dieselben berechneten Mengen und Anweisungen in einer für die Mela-Rezepte-App geeigneten Struktur. Dabei werden Roggen-, Weizen- und Dinkelsauerteig eindeutig bezeichnet. Prüfe nach dem Import, ob die Ziel-App alle Formatierungen wie erwartet übernommen hat.
+**PDF** erzeugt eine lesbare Rezeptfassung mit Zutaten, berechneten Mengen und Arbeitsablauf. Bei mehreren Broten nennt sie Anzahl, Fertiggewicht je Brot und die Portionierung des Gesamtteigs. Sauerteig, Sauerteigprüfung und ein vorhandenes Brüh- oder Quellstück erscheinen in ihrer tatsächlichen zeitlichen Reihenfolge. **Mela** übergibt dieselben berechneten Mengen und Anweisungen in einer für die Mela-Rezepte-App geeigneten Struktur. Dabei werden Roggen-, Weizen- und Dinkelsauerteig eindeutig bezeichnet. Prüfe nach dem Import, ob die Ziel-App alle Formatierungen wie erwartet übernommen hat.
 
 ### Zutatenstamm
 
@@ -167,6 +175,8 @@ Nach Ablauf der fünf Minuten bleibt die Prüfung geöffnet und die App springt 
 ### Arbeitszeiten lernen
 
 Die Sauerteigprüfung, Hauptteig herstellen, Kneten sowie Rundwirken und Formen können gemessen werden. Weicht die tatsächliche Dauer sinnvoll von der Planung ab, fragt die App, ob der neue Wert für künftige Backtage dieses Rezepts übernommen werden soll.
+
+Bei mehreren Broten lernt die App beim Rundwirken und Formen den Grundwert für das erste Brot. Für jedes weitere Brot werden weiterhin 3 Minuten ergänzt. Dadurch wird eine gemessene Gesamtzeit nicht bei jedem späteren Backtag nochmals mit der Brotanzahl vervielfacht.
 
 - **Übernehmen:** Der laufende Backtag und zukünftige Planungen verwenden den neuen Rezeptwert.
 - **Nicht übernehmen:** Nur der laufende Backtag berücksichtigt die tatsächliche Dauer; der bisherige Rezeptwert bleibt für das nächste Mal erhalten.
