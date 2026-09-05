@@ -4,10 +4,318 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Markus Ball · App Support</title>
-  <meta name="description" content="Support und Benutzerhandbücher für Apps von Markus Ball">
+  <meta name="description" content="Benutzerhandbücher, Hilfe und Tipps für macOS-Apps von Markus Ball">
   <style>
-    :root{color-scheme:light dark;--bg:#f4f6f8;--card:#fff;--text:#20252b;--muted:#5d6873;--accent:#1769aa;--rule:#d4d9de}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:900px;margin:auto;padding:64px 24px}h1{font-size:clamp(2.2rem,6vw,4rem);line-height:1.08;margin:.1em 0}.lead{color:var(--muted);font-size:1.2rem;margin:0 0 2.5rem}.apps{display:grid;gap:18px}.card{display:block;padding:26px;border:1px solid var(--rule);border-radius:16px;background:var(--card);color:inherit;text-decoration:none;box-shadow:0 10px 30px #0000000d}.card:hover{border-color:var(--accent);transform:translateY(-1px)}h2{margin:0 0 .35rem;color:var(--accent)}.card p{margin:0;color:var(--muted)}footer{margin-top:3rem;color:var(--muted);font-size:.9rem}@media(prefers-color-scheme:dark){:root{--bg:#17191c;--card:#22262b;--text:#f1f3f5;--muted:#b7c0c8;--accent:#69b7f5;--rule:#414850}}
+    :root {
+      color-scheme: dark;
+      --bg: #081019;
+      --panel: #101a24;
+      --panel-soft: #142232;
+      --line: #2b3c4c;
+      --text: #f5f7fa;
+      --muted: #b8c4d0;
+      --blue: #55b8ff;
+      --blue-soft: #b9dcf7;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 50% 5%, #172737 0, transparent 38rem),
+        var(--bg);
+      color: var(--text);
+      font: 16px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: inherit; }
+    .page {
+      width: min(1536px, calc(100% - 28px));
+      margin: 14px auto;
+      overflow: hidden;
+      border: 1px solid #34414c;
+      border-radius: 16px;
+      background: #0a121b;
+      box-shadow: 0 28px 90px #0009;
+    }
+    .topbar {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      padding: 0 28px;
+      border-bottom: 1px solid #34414c;
+      background: linear-gradient(180deg, #131c25, #0e151d);
+    }
+    .lights { display: flex; gap: 10px; }
+    .light { width: 14px; height: 14px; border-radius: 50%; }
+    .light.red { background: #ff5f57; }
+    .light.yellow { background: #febc2e; }
+    .light.green { background: #28c840; }
+    .brand { line-height: 1.15; }
+    .brand strong { display: block; font-size: 20px; }
+    .brand span { color: var(--muted); }
+    nav { margin-left: auto; display: flex; gap: 34px; align-self: stretch; }
+    nav a {
+      position: relative;
+      display: grid;
+      place-items: center;
+      text-decoration: none;
+      color: #d3dae1;
+    }
+    nav a:first-child { color: var(--blue); }
+    nav a:first-child::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 10px;
+      height: 2px;
+      background: var(--blue);
+    }
+    .hero { position: relative; background: #101820; }
+    .hero img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 510px;
+      object-fit: cover;
+    }
+    main { padding: 30px clamp(18px, 3.8vw, 58px) 18px; }
+    .apps {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .card {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      align-items: center;
+      padding: 22px 20px 20px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background:
+        radial-gradient(circle at 50% 13%, #1b2c3a 0, transparent 46%),
+        linear-gradient(165deg, #121e29, #0d1720);
+      box-shadow: inset 0 1px #ffffff0b, 0 10px 30px #0003;
+    }
+    .logo {
+      width: min(180px, 76%);
+      aspect-ratio: 1;
+      object-fit: contain;
+      filter: drop-shadow(0 12px 16px #0008);
+    }
+    .card h2 {
+      margin: 9px 0 2px;
+      font-size: clamp(19px, 1.55vw, 25px);
+      line-height: 1.15;
+      text-align: center;
+    }
+    .summary {
+      min-height: 48px;
+      margin: 0 0 14px;
+      color: var(--muted);
+      text-align: center;
+    }
+    .manual {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 15px;
+      border: 1px solid #33516a;
+      border-radius: 11px;
+      background: linear-gradient(180deg, #1b344a, #14283a);
+      color: #eaf6ff;
+      text-decoration: none;
+      transition: border-color .15s, transform .15s, background .15s;
+    }
+    .manual:hover, .manual:focus-visible {
+      border-color: var(--blue);
+      background: linear-gradient(180deg, #214463, #18344c);
+      transform: translateY(-1px);
+    }
+    .book { font-size: 24px; line-height: 1; color: var(--blue-soft); }
+    .arrow { margin-left: auto; font-size: 25px; font-weight: 300; }
+    .features {
+      width: 100%;
+      display: grid;
+      gap: 10px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .features li { display: flex; align-items: center; gap: 11px; }
+    .feature-icon {
+      width: 22px;
+      color: var(--blue-soft);
+      text-align: center;
+      font-size: 17px;
+    }
+    .service-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 16px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: linear-gradient(135deg, #111d28, #0b151e);
+    }
+    .service {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 16px;
+      align-items: center;
+      padding: 20px 28px;
+    }
+    .service + .service { border-left: 1px solid var(--line); }
+    .service-badge {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--blue);
+      border-radius: 50%;
+      background: #0c4b7b;
+      color: #9dd7ff;
+      box-shadow: 0 0 20px #279ce755;
+      font-size: 29px;
+    }
+    .service:nth-child(2) .service-badge {
+      border-color: #f5c446;
+      background: #624708;
+      color: #ffe193;
+      box-shadow: 0 0 20px #e9b62f55;
+    }
+    .service:nth-child(3) .service-badge {
+      border-color: #5fd77b;
+      background: #174b28;
+      color: #a7efb6;
+      box-shadow: 0 0 20px #49c46944;
+    }
+    .service h3 { margin: 0 0 3px; font-size: 17px; }
+    .service p { margin: 0; color: var(--muted); font-size: 14px; }
+    .service a {
+      display: inline-block;
+      margin-top: 7px;
+      color: var(--blue);
+      text-decoration: none;
+      font-size: 14px;
+    }
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 2px 3px;
+      color: #82909d;
+      font-size: 13px;
+    }
+    @media (max-width: 1050px) {
+      .apps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .service-strip { grid-template-columns: 1fr; }
+      .service + .service { border-left: 0; border-top: 1px solid var(--line); }
+    }
+    @media (max-width: 650px) {
+      .page { width: 100%; margin: 0; border-width: 0; border-radius: 0; }
+      .topbar { min-height: 64px; padding: 0 16px; gap: 16px; }
+      .lights { gap: 6px; }
+      .light { width: 10px; height: 10px; }
+      .brand strong { font-size: 17px; }
+      nav { gap: 17px; font-size: 14px; }
+      nav a:last-child { display: none; }
+      main { padding-top: 18px; }
+      .apps { grid-template-columns: 1fr; }
+      .logo { width: 150px; }
+      .service { padding: 18px; }
+      footer { flex-direction: column; }
+    }
   </style>
 </head>
-<body><main><h1>App Support</h1><p class="lead">Benutzerhandbücher und Hilfe · User manuals and support</p><div class="apps"><a class="card" href="photocapturetime/"><h2>PhotoCaptureTime</h2><p>Fotos nach Aufnahmezeit intelligent benennen · Smart photo naming by capture time</p></a><a class="card" href="geniushdr/"><h2>GeniusHDR GainMap Studio</h2><p>Kontrollierte HDR-Gain-Maps für Fotos · Controlled HDR gain maps for photographs</p></a><a class="card" href="fotostackimporter/"><h2>FotoStack Importer</h2><p>Fotos sicher importieren und automatisch organisieren · Safely import and automatically organize photographs</p></a><a class="card" href="brotbackstubb/"><h2>BrotBackstubb</h2><p>Brot-Rezepte berechnen und den Backtag planen · Calculate bread recipes and plan the baking day</p></a></div><footer>© 2026 Markus Ball</footer></main></body>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="lights" aria-hidden="true">
+        <span class="light red"></span><span class="light yellow"></span><span class="light green"></span>
+      </div>
+      <div class="brand"><strong>Markus Ball</strong><span>macOS Apps</span></div>
+      <nav aria-label="Seitennavigation">
+        <a href="#apps">Apps</a>
+        <a href="#support">Support</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-label="App Support">
+      <img src="assets/app-support-hero.png" alt="App Support – Benutzerhandbücher, Hilfe und Tipps">
+    </section>
+
+    <main>
+      <section class="apps" id="apps" aria-label="Apps und Benutzerhandbücher">
+        <article class="card">
+          <img class="logo" src="assets/photocapturetime-logo.png" alt="Logo von PhotoCaptureTime">
+          <h2>PhotoCaptureTime</h2>
+          <p class="summary">Fotos nach Aufnahmezeit<br>intelligent benennen.</p>
+          <a class="manual" href="photocapturetime/"><span class="book" aria-hidden="true">▱</span><span>Handbuch öffnen</span><span class="arrow" aria-hidden="true">›</span></a>
+          <ul class="features">
+            <li><span class="feature-icon">◉</span>Automatische Zeitstempel</li>
+            <li><span class="feature-icon">◆</span>Flexible Namensregeln</li>
+            <li><span class="feature-icon">▰</span>Mehr Ordnung in der Fotosammlung</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <img class="logo" src="assets/fotostackimporter-logo.png" alt="Logo von FotoStack Importer">
+          <h2>FotoStack Importer</h2>
+          <p class="summary">Fotos sicher importieren<br>und automatisch organisieren.</p>
+          <a class="manual" href="fotostackimporter/"><span class="book" aria-hidden="true">▱</span><span>Handbuch öffnen</span><span class="arrow" aria-hidden="true">›</span></a>
+          <ul class="features">
+            <li><span class="feature-icon">▱</span>Schneller Import</li>
+            <li><span class="feature-icon">▰</span>Automatische Organisation</li>
+            <li><span class="feature-icon">▦</span>Übersichtliche Ordnerstruktur</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <img class="logo" src="assets/geniushdr-logo.png" alt="Logo von GeniusHDR GainMap Studio">
+          <h2>GeniusHDR GainMap Studio</h2>
+          <p class="summary">Kontrollierte HDR-Gain-Maps<br>für Fotos.</p>
+          <a class="manual" href="geniushdr/"><span class="book" aria-hidden="true">▱</span><span>Handbuch öffnen</span><span class="arrow" aria-hidden="true">›</span></a>
+          <ul class="features">
+            <li><span class="feature-icon">☀</span>Natürliche HDR-Bilder</li>
+            <li><span class="feature-icon">☷</span>Fein abgestimmte Automatik</li>
+            <li><span class="feature-icon">▣</span>Optimiert für macOS</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <img class="logo" src="assets/brotbackstubb-logo.png" alt="Logo von BrotBackstubb">
+          <h2>BrotBackstubb</h2>
+          <p class="summary">Brot-Rezepte berechnen<br>und den Backtag planen.</p>
+          <a class="manual" href="brotbackstubb/"><span class="book" aria-hidden="true">▱</span><span>Handbuch öffnen</span><span class="arrow" aria-hidden="true">›</span></a>
+          <ul class="features">
+            <li><span class="feature-icon">♨</span>Bewährte Rezeptgrundlagen</li>
+            <li><span class="feature-icon">▦</span>Präzise Berechnungen</li>
+            <li><span class="feature-icon">▣</span>Den perfekten Backtag planen</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="service-strip" id="support" aria-label="Hilfe und Support">
+        <div class="service">
+          <div class="service-badge" aria-hidden="true">?</div>
+          <div><h3>Hilfe bei Fragen</h3><p>Antworten auf häufige Fragen und nützliche Tipps findest du direkt in den Handbüchern.</p><a href="#apps">Zum Support →</a></div>
+        </div>
+        <div class="service">
+          <div class="service-badge" aria-hidden="true">☼</div>
+          <div><h3>Tipps und Anleitungen</h3><p>Detaillierte Handbücher, Schritt-für-Schritt-Anleitungen und praktische Beispiele.</p><a href="#apps">Zu den Handbüchern →</a></div>
+        </div>
+        <div class="service" id="kontakt">
+          <div class="service-badge" aria-hidden="true">✉</div>
+          <div><h3>Kontakt</h3><p>Fragen und Anregungen sind willkommen. Nutze dafür die Kontaktmöglichkeit der jeweiligen App.</p><a href="#apps">App auswählen →</a></div>
+        </div>
+      </section>
+
+      <footer><span>© 2026 Markus Ball</span><span>macOS Apps · Fotografie · Organisation · Genuss</span></footer>
+    </main>
+  </div>
+</body>
 </html>
