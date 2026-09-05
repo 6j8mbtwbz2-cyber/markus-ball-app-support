@@ -37,39 +37,6 @@
       background: #0a121b;
       box-shadow: 0 28px 90px #0009;
     }
-    .topbar {
-      min-height: 70px;
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      padding: 0 28px;
-      border-bottom: 1px solid #34414c;
-      background: linear-gradient(180deg, #131c25, #0e151d);
-    }
-    .lights { display: flex; gap: 10px; }
-    .light { width: 14px; height: 14px; border-radius: 50%; }
-    .light.red { background: #ff5f57; }
-    .light.yellow { background: #febc2e; }
-    .light.green { background: #28c840; }
-    .brand { line-height: 1.15; }
-    .brand strong { display: block; font-size: 20px; }
-    .brand span { color: var(--muted); }
-    nav { margin-left: auto; display: flex; gap: 34px; align-self: stretch; }
-    nav a {
-      position: relative;
-      display: grid;
-      place-items: center;
-      text-decoration: none;
-      color: #d3dae1;
-    }
-    nav a:first-child { color: var(--blue); }
-    nav a:first-child::after {
-      content: "";
-      position: absolute;
-      inset: auto 0 10px;
-      height: 2px;
-      background: var(--blue);
-    }
     .hero { position: relative; background: #101820; }
     .hero img {
       display: block;
@@ -97,14 +64,26 @@
         linear-gradient(165deg, #121e29, #0d1720);
       box-shadow: inset 0 1px #ffffff0b, 0 10px 30px #0003;
     }
-    .logo {
+    .logo-frame {
       width: min(180px, 76%);
       aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+    }
+    .logo {
+      width: 100%;
+      height: 100%;
       object-fit: contain;
       filter: drop-shadow(0 12px 16px #0008);
     }
+    .logo.photo { transform: scale(1.065); }
+    .logo.stack { transform: scale(.947); }
+    .logo.bread { transform: scale(.88); }
     .card h2 {
       margin: 9px 0 2px;
+      min-height: 58px;
+      display: grid;
+      place-items: center;
       font-size: clamp(19px, 1.55vw, 25px);
       line-height: 1.15;
       text-align: center;
@@ -152,55 +131,6 @@
       text-align: center;
       font-size: 17px;
     }
-    .service-strip {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      margin-top: 16px;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: linear-gradient(135deg, #111d28, #0b151e);
-    }
-    .service {
-      display: grid;
-      grid-template-columns: 64px 1fr;
-      gap: 16px;
-      align-items: center;
-      padding: 20px 28px;
-    }
-    .service + .service { border-left: 1px solid var(--line); }
-    .service-badge {
-      width: 58px;
-      height: 58px;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--blue);
-      border-radius: 50%;
-      background: #0c4b7b;
-      color: #9dd7ff;
-      box-shadow: 0 0 20px #279ce755;
-      font-size: 29px;
-    }
-    .service:nth-child(2) .service-badge {
-      border-color: #f5c446;
-      background: #624708;
-      color: #ffe193;
-      box-shadow: 0 0 20px #e9b62f55;
-    }
-    .service:nth-child(3) .service-badge {
-      border-color: #5fd77b;
-      background: #174b28;
-      color: #a7efb6;
-      box-shadow: 0 0 20px #49c46944;
-    }
-    .service h3 { margin: 0 0 3px; font-size: 17px; }
-    .service p { margin: 0; color: var(--muted); font-size: 14px; }
-    .service a {
-      display: inline-block;
-      margin-top: 7px;
-      color: var(--blue);
-      text-decoration: none;
-      font-size: 14px;
-    }
     footer {
       display: flex;
       justify-content: space-between;
@@ -211,39 +141,18 @@
     }
     @media (max-width: 1050px) {
       .apps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .service-strip { grid-template-columns: 1fr; }
-      .service + .service { border-left: 0; border-top: 1px solid var(--line); }
     }
     @media (max-width: 650px) {
       .page { width: 100%; margin: 0; border-width: 0; border-radius: 0; }
-      .topbar { min-height: 64px; padding: 0 16px; gap: 16px; }
-      .lights { gap: 6px; }
-      .light { width: 10px; height: 10px; }
-      .brand strong { font-size: 17px; }
-      nav { gap: 17px; font-size: 14px; }
-      nav a:last-child { display: none; }
       main { padding-top: 18px; }
       .apps { grid-template-columns: 1fr; }
-      .logo { width: 150px; }
-      .service { padding: 18px; }
+      .logo-frame { width: 150px; }
       footer { flex-direction: column; }
     }
   </style>
 </head>
 <body>
   <div class="page">
-    <header class="topbar">
-      <div class="lights" aria-hidden="true">
-        <span class="light red"></span><span class="light yellow"></span><span class="light green"></span>
-      </div>
-      <div class="brand"><strong>Markus Ball</strong><span>macOS Apps</span></div>
-      <nav aria-label="Seitennavigation">
-        <a href="#apps">Apps</a>
-        <a href="#support">Support</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-    </header>
-
     <section class="hero" aria-label="App Support">
       <img src="assets/app-support-hero.png" alt="App Support – Benutzerhandbücher, Hilfe und Tipps">
     </section>
@@ -251,7 +160,7 @@
     <main>
       <section class="apps" id="apps" aria-label="Apps und Benutzerhandbücher">
         <article class="card">
-          <img class="logo" src="assets/photocapturetime-logo.png" alt="Logo von PhotoCaptureTime">
+          <div class="logo-frame"><img class="logo photo" src="assets/photocapturetime-logo.png" alt="Logo von PhotoCaptureTime"></div>
           <h2>PhotoCaptureTime</h2>
           <p class="summary">Fotos nach Aufnahmezeit<br>intelligent benennen.</p>
           <a class="manual" href="photocapturetime/"><span class="book" aria-hidden="true">▱</span><span>Handbuch öffnen</span><span class="arrow" aria-hidden="true">›</span></a>
@@ -263,7 +172,7 @@
         </article>
 
         <article class="card">
-          <img class="logo" src="assets/fotostackimporter-logo.png" alt="Logo von FotoStack Importer">
+          <div class="logo-frame"><img class="logo stack" src="assets/fotostackimporter-logo.png" alt="Logo von FotoStack Importer"></div>
           <h2>FotoStack Importer</h2>
           <p class="summary">Fotos sicher importieren<br>und automatisch organisieren.</p>
           <a class="manual" href="fotostackimporter/"><span class="book" aria-hidden="true">▱</span><span>Handbuch öffnen</span><span class="arrow" aria-hidden="true">›</span></a>
@@ -275,7 +184,7 @@
         </article>
 
         <article class="card">
-          <img class="logo" src="assets/geniushdr-logo.png" alt="Logo von GeniusHDR GainMap Studio">
+          <div class="logo-frame"><img class="logo" src="assets/geniushdr-logo.png" alt="Logo von GeniusHDR GainMap Studio"></div>
           <h2>GeniusHDR GainMap Studio</h2>
           <p class="summary">Kontrollierte HDR-Gain-Maps<br>für Fotos.</p>
           <a class="manual" href="geniushdr/"><span class="book" aria-hidden="true">▱</span><span>Handbuch öffnen</span><span class="arrow" aria-hidden="true">›</span></a>
@@ -287,7 +196,7 @@
         </article>
 
         <article class="card">
-          <img class="logo" src="assets/brotbackstubb-logo.png" alt="Logo von BrotBackstubb">
+          <div class="logo-frame"><img class="logo bread" src="assets/brotbackstubb-logo.png" alt="Logo von BrotBackstubb"></div>
           <h2>BrotBackstubb</h2>
           <p class="summary">Brot-Rezepte berechnen<br>und den Backtag planen.</p>
           <a class="manual" href="brotbackstubb/"><span class="book" aria-hidden="true">▱</span><span>Handbuch öffnen</span><span class="arrow" aria-hidden="true">›</span></a>
@@ -297,21 +206,6 @@
             <li><span class="feature-icon">▣</span>Den perfekten Backtag planen</li>
           </ul>
         </article>
-      </section>
-
-      <section class="service-strip" id="support" aria-label="Hilfe und Support">
-        <div class="service">
-          <div class="service-badge" aria-hidden="true">?</div>
-          <div><h3>Hilfe bei Fragen</h3><p>Antworten auf häufige Fragen und nützliche Tipps findest du direkt in den Handbüchern.</p><a href="#apps">Zum Support →</a></div>
-        </div>
-        <div class="service">
-          <div class="service-badge" aria-hidden="true">☼</div>
-          <div><h3>Tipps und Anleitungen</h3><p>Detaillierte Handbücher, Schritt-für-Schritt-Anleitungen und praktische Beispiele.</p><a href="#apps">Zu den Handbüchern →</a></div>
-        </div>
-        <div class="service" id="kontakt">
-          <div class="service-badge" aria-hidden="true">✉</div>
-          <div><h3>Kontakt</h3><p>Fragen und Anregungen sind willkommen. Nutze dafür die Kontaktmöglichkeit der jeweiligen App.</p><a href="#apps">App auswählen →</a></div>
-        </div>
       </section>
 
       <footer><span>© 2026 Markus Ball</span><span>macOS Apps · Fotografie · Organisation · Genuss</span></footer>
