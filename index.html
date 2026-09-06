@@ -117,6 +117,29 @@
       background: linear-gradient(180deg, #214463, #18344c);
       transform: translateY(-1px);
     }
+    .examples {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 8px;
+      padding: 9px 15px;
+      border: 1px solid #33516a;
+      border-radius: 11px;
+      background: linear-gradient(180deg, #1b344a, #14283a);
+      color: #eaf6ff;
+      text-decoration: none;
+      transition: border-color .15s, transform .15s, background .15s;
+    }
+    .examples:hover, .examples:focus-visible {
+      border-color: var(--blue);
+      background: linear-gradient(180deg, #214463, #18344c);
+      transform: translateY(-1px);
+    }
+    .examples-icon { width: 24px; color: var(--blue); text-align: center; font-size: 19px; }
+    .logo-link { width: 100%; height: 100%; display: grid; place-items: center; border-radius: 50%; }
+    .logo-link:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
+    .card.genius .features { margin-top: 12px; }
     .book { font-size: 24px; line-height: 1; color: var(--blue-soft); }
     .arrow { margin-left: auto; font-size: 25px; font-weight: 300; }
     .features {
@@ -188,11 +211,12 @@
           </ul>
         </article>
 
-        <article class="card">
-          <div class="logo-frame"><img class="logo" src="assets/geniushdr-logo.png" alt="Logo von GeniusHDR GainMap Studio"></div>
+        <article class="card genius">
+          <div class="logo-frame"><a class="logo-link" href="geniushdr/hdr-test/" aria-label="HDR-Beispielbilder von GeniusHDR ansehen"><img class="logo" src="assets/geniushdr-logo.png" alt="Logo von GeniusHDR GainMap Studio"></a></div>
           <h2>GeniusHDR GainMap Studio</h2>
           <p class="summary">Kontrollierte HDR-Gain-Maps<br>für Fotos.</p>
           <a class="manual" href="geniushdr/"><span class="book" aria-hidden="true">▱</span><span>Handbuch öffnen</span><span class="arrow" aria-hidden="true">›</span></a>
+          <a class="examples" href="geniushdr/hdr-test/"><span class="examples-icon" aria-hidden="true">▧</span><span>HDR-Beispielbilder ansehen</span><span class="arrow" aria-hidden="true">›</span></a>
           <ul class="features">
             <li><span class="feature-icon">☀</span>Natürliche HDR-Bilder</li>
             <li><span class="feature-icon">☷</span>Fein abgestimmte Automatik</li>
