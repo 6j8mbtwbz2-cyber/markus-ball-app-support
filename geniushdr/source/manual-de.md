@@ -308,6 +308,8 @@ Die HDR-Regler erzeugen in diesem Format keine Gain Map.
 
 Wähle ein Bild oder mehrere Einträge in der Bilderleiste und klicke auf **Exportieren**. GeniusHDR verwendet die pro Bild gespeicherten Einstellungen.
 
+> **Wichtig:** Jeder Export erstellt eine neue Ausgabedatei in einem unterstützten Ausgabeformat. Das Bild wird dabei konvertiert; bei allen HDR-Ausgabeformaten wird eine Gain Map eingebettet und die technische Struktur unterscheidet sich von der Ausgangsdatei. Eine mit GeniusHDR eingebettete Gain Map kann mit der App nicht wieder entfernt werden. Bewahre deshalb die ursprüngliche beziehungsweise von einem anderen Programm übergebene Ausgangsdatei unabhängig von allen Exporten auf. Prüfe vor dem Export Vorschau, Ausgabeformat, Dateinamen und Zielordner.
+
 Im Automatikmodus werden neu eingehende Bilder mit ihren motivabhängigen Automatikwerten verarbeitet. Vorhandene Originaldateien werden nicht überschrieben.
 
 <a id="section-38-quality-and-size-limits"></a>

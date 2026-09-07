@@ -308,6 +308,8 @@ The HDR controls do not create a gain map in this format.
 
 Select one or more entries in the filmstrip and click **Export**. GeniusHDR uses the settings stored for each image.
 
+> **Important:** Every export creates a new file in a supported output format. The image is converted; all HDR output formats embed a gain map and the technical structure differs from that of the source file. A gain map embedded by GeniusHDR cannot be removed by the app. Therefore, keep the original source file, including any file passed from another application, independently of all exports. Before exporting, check the preview, output format, file name, and destination.
+
 In automation mode, newly arriving images are processed using their subject-specific automatic values. Existing original files are not overwritten.
 
 <a id="section-38-quality-and-size-limits"></a>

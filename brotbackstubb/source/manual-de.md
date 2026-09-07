@@ -18,6 +18,8 @@ Alle Rezepte erscheinen auf der Startseite **Meine Brote**. Von dort erstellst d
 
 > **Die App liefert fachlich berechnete Ausgangswerte.** Mehlcharge, Raumtemperatur, Maschine und persönliche Arbeitsweise können das Ergebnis beeinflussen. Deshalb kann BrotBackstubb ausgewählte Arbeits- und Temperaturerfahrungen rezeptbezogen übernehmen.
 
+> **Wichtig:** Mengen, Zeiten, Temperaturen und sonstige Berechnungen sind Orientierungshilfen und keine Garantie für ein bestimmtes Backergebnis. Rohstoffe, Triebmittel, Geräte und Umgebungsbedingungen können das Ergebnis beeinflussen. Prüfe Zutaten auf Eignung und Verträglichkeit und Lebensmittel vor dem Verzehr auf eine sichere Zubereitung.
+
 Warnungen im Rezeptassistenten kennzeichnen Werte außerhalb der empfohlenen Bereiche. Sie blockieren begründete Sonderfälle nicht. So lassen sich auch traditionelle Rezepte abbilden.
 
 ## Meine Brote

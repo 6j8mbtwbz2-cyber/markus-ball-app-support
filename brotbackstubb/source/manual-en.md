@@ -18,6 +18,8 @@ All recipes appear on the **My Loaves** homepage. From there, you can create a r
 
 > **The app provides scientifically calculated starting values.** Flour charge, room temperature, machine, and personal working style can affect the result. Therefore, Bread Calculator can incorporate selected working and temperature experiences recipe-wise.
 
+> **Important:** Quantities, times, temperatures, and other calculations are provided as guidance and do not guarantee a particular baking result. Ingredients, leavening agents, appliances, and environmental conditions may affect the result. Check ingredients for suitability and tolerability, and ensure food has been prepared safely before consumption.
+
 Warnings in the recipe assistant indicate values outside the recommended range. They do not block justified exceptions. Thus, traditional recipes can also be represented.
 
 ## My Loaves
