@@ -524,4 +524,6 @@ The app does not upload images to an online service for HDR processing. Completi
 
 Copyright © 2026 Markus Ball. All rights reserved.
 
-GeniusHDR GainMap Studio uses the Ultra HDR reference codec for **HDR JPEG (ISO 21496-1)**. The associated license texts are included in the project or application distribution. Apple, macOS, HEIF, and other product names are trademarks of their respective owners.
+GeniusHDR GainMap Studio uses Google's Ultra HDR reference codec (**libultrahdr**) for **HDR JPEG (ISO 21496-1)**. **libjpeg-turbo** is additionally used for JPEG compression within this processing path. The associated license texts are included in the project or application distribution.
+
+The Apple-compatible output formats, previews, and image processing use macOS system technologies, including ImageIO, Core Image, and Metal. These Apple system frameworks are not third-party components of the app. Apple, macOS, HEIF, and other product names are trademarks of their respective owners.
