@@ -57,7 +57,7 @@ Im ersten Schritt des Assistenten legst du die **Anzahl der Brote** und das **Fe
 
 > **Backzeit und Backtemperatur:** Das Backprofil richtet sich weiterhin nach dem Gewicht eines einzelnen Brotes, nicht nach dem Gesamtgewicht der Charge. Vier gleichzeitig gebackene Brote zu je 1.000 g erhalten daher dasselbe Backprofil wie ein einzelnes Brot zu 1.000 g. Voraussetzung ist, dass die Brote gleichzeitig in den Ofen passen und der Ofen für diese Belegung geeignet ist.
 
-Beim Schritt **Rundwirken und formen** nennt die App die Anzahl der Portionen und das ungefähre Teiggewicht je Portion. Die geplante Arbeitszeit beträgt für das erste Brot den im Rezept hinterlegten Grundwert - standardmäßig 10 Minuten - und zusätzlich 3 Minuten für jedes weitere Brot. Damit plant die App beispielsweise 19 Minuten für vier und 37 Minuten für zehn Brote.
+Beim Schritt **Rundwirken und formen** nennt die App die Anzahl der Portionen und das ungefähre Teiggewicht je Portion. Für ein neues, noch nicht angepasstes Rezept beträgt die geplante Arbeitszeit 10 Minuten für das Einrichten des Arbeitsplatzes und das erste Brot sowie 3 Minuten für jedes weitere Brot. Damit plant die App zunächst beispielsweise 19 Minuten für vier und 37 Minuten für zehn Brote.
 
 ### Mehle und Wasseraufnahme
 

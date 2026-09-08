@@ -57,7 +57,7 @@ In the first assistant step, set the **number of loaves** and the **finished wei
 
 > **Baking time and temperature:** The baking profile continues to use the weight of one loaf, not the total batch weight. Four 1,000 g loaves baked together therefore use the same baking profile as one 1,000 g loaf. This assumes that all loaves fit in the oven at the same time and that the oven is suitable for that load.
 
-During **Pre-shape and shape**, the app states the number of portions and the approximate dough weight of each portion. The planned work time uses the recipe's base time for the first loaf - 10 minutes by default - plus 3 minutes for every additional loaf. For example, the app plans 19 minutes for four loaves and 37 minutes for ten loaves.
+During **Pre-shape and shape**, the app states the number of portions and the approximate dough weight of each portion. For a new recipe that has not yet been adjusted, the planned work time is 10 minutes for setting up the workspace and shaping the first loaf, plus 3 minutes for each additional loaf. The app therefore initially plans, for example, 19 minutes for four loaves and 37 minutes for ten loaves.
 
 ### Flours and the default water factor
 
