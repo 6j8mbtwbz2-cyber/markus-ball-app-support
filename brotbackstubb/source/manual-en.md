@@ -12,7 +12,7 @@ schema: brotbackstubb-manual-v1
 
 Bread Calculator supports you in creating, calculating, and scheduling free-form breads. The app calculates ingredient quantities from the desired bread weight, considers the water absorption of the selected flours, and the water from the brewing and quenching pieces, and guides you through the recipe step-by-step on the baking day.
 
-All recipes appear on the **My Loaves** homepage. From there, you can create a recipe, edit an existing recipe, create a PDF or Melan file, and start the baking day.
+All recipes appear on the **My Loaves** homepage. From there, you can create a recipe, edit an existing recipe, create a PDF or Mela recipe file (.melarecipe), and start the baking day.
 
 ## Principle
 
@@ -30,7 +30,7 @@ A recipe card displays the name, bread type, flavor-influencing ingredients, pro
 
 - Plan Bake Day opens the temporal planning immediately and is emphasized as the most important action.
 - Edit opens the recipe assistant with the existing values.
-- The action menu at the top right offers PDF display and storage, Mela transfer, edit, and delete.
+- The action menu at the top right offers PDF display and storage, export for Mela, edit, and delete.
 
 Using the search bar at the top right, you filter the saved breads. **New Bread Recipe** starts the assistant.
 
@@ -132,7 +132,7 @@ The method of generating steam depends on your oven and equipment. Options inclu
 
 ### PDF and Mela
 
-**PDF** produces a readable recipe with ingredients, calculated quantities, and workflow. For multiple loaves, it states the loaf count, finished weight per loaf, and how to portion the total dough. Sourdough, the sourdough check, and an existing scald or soaker appear in their actual chronological order. **Mela** transfers the same calculated quantities and instructions into a structure suitable for the Mela Recipe App. Rye, wheat, and spelt sourdough are clearly distinguished. After importing, check whether the target app retained all formatting as expected.
+**PDF** produces a readable recipe with ingredients, calculated quantities, and workflow. For multiple loaves, it states the loaf count, finished weight per loaf, and how to portion the total dough. Sourdough, the sourdough check, and an existing scald or soaker appear in their actual chronological order. **Export for Mela** creates a Mela recipe file (.melarecipe) containing the same calculated quantities and instructions. You can then import this file into the Mela Recipe App. Rye, wheat, and spelt sourdough are clearly distinguished. After importing, check whether the target app retained all formatting as expected.
 
 ### Ingredient List
 
