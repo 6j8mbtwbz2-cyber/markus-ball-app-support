@@ -188,7 +188,7 @@ Nach Ablauf der fünf Minuten bleibt die Prüfung geöffnet und die App springt 
 
 Die Sauerteigprüfung, Hauptteig herstellen, Kneten sowie Rundwirken und Formen können gemessen werden. Weicht die tatsächliche Dauer sinnvoll von der Planung ab, fragt die App, ob der neue Wert für künftige Backtage dieses Rezepts übernommen werden soll.
 
-Bei mehreren Broten lernt die App beim Rundwirken und Formen den Grundwert für das erste Brot. Für jedes weitere Brot werden weiterhin 3 Minuten ergänzt. Dadurch wird eine gemessene Gesamtzeit nicht bei jedem späteren Backtag nochmals mit der Brotanzahl vervielfacht.
+Beim Rundwirken und Formen startet die App mit 10 Minuten für das Einrichten des Arbeitsplatzes und das erste Brot sowie 3 Minuten für jedes weitere Brot. Wenn du eine gemessene Gesamtzeit übernimmst, verteilt sie die Abweichung gleichmäßig auf alle Brote. Der Anteil verändert sowohl die Grundzeit des ersten Brotes als auch den Zuschlag für jedes weitere Brot. Beispiel: Waren für zehn Brote zunächst 37 Minuten geplant und hast du tatsächlich 29 Minuten benötigt, werden 0,8 Minuten je Brot abgezogen. Künftig plant die App für zehn Brote 29 Minuten und für sechs Brote gerundet 20 Minuten ein.
 
 - **Übernehmen:** Der laufende Backtag und zukünftige Planungen verwenden den neuen Rezeptwert.
 - **Nicht übernehmen:** Nur der laufende Backtag berücksichtigt die tatsächliche Dauer; der bisherige Rezeptwert bleibt für das nächste Mal erhalten.

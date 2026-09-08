@@ -194,7 +194,7 @@ If the sourdough is not yet proofed, **Not Proofed · 30 Mins Longer** extends t
 
 The sourdough check, main dough preparation, kneading, and shaping can be measured. If the actual duration is significantly different from the plan, the app asks if the new value should be used for future baking days of this recipe.
 
-For multiple loaves, the app learns the shaping base time for the first loaf. It continues to add 3 minutes for every additional loaf. This prevents a measured total time from being multiplied by the loaf count again on a later baking day.
+For shaping, the app starts with 10 minutes for setting up the workspace and shaping the first loaf, plus 3 minutes for each additional loaf. If you accept a measured total time, it distributes the difference equally across all loaves. That share adjusts both the base time for the first loaf and the additional time for every further loaf. Example: if 37 minutes were initially planned for ten loaves but you actually needed 29 minutes, 0.8 minutes is deducted per loaf. In future, the app will plan 29 minutes for ten loaves and, rounded, 20 minutes for six loaves.
 
 - **Accept:** The ongoing baking day and future plans will use the new recipe value.
 - **Do not accept:** Only the ongoing baking day considers the actual duration; the previous recipe value is retained for the next time.
