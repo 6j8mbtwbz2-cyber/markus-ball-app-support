@@ -12,7 +12,7 @@ schema: brotbackstubb-manual-v1
 
 BrotBackstubb unterstützt dich beim Erstellen, Berechnen und zeitlichen Durchführen frei geschobener Brote. Die App berechnet Zutatenmengen aus dem gewünschten Brotgewicht, berücksichtigt die Wasseraufnahme der ausgewählten Mehle sowie das Wasser von Brüh- und Quellstücken und führt dich am Backtag Schritt für Schritt durch das Rezept.
 
-Alle Rezepte erscheinen auf der Startseite **Meine Brote**. Von dort erstellst du ein Rezept, bearbeitest ein vorhandenes Rezept, erzeugst eine PDF- oder Mela-Fassung und startest den Backtag.
+Alle Rezepte erscheinen auf der Startseite **Meine Brote**. Von dort erstellst du ein Rezept, bearbeitest ein vorhandenes Rezept, erzeugst eine PDF- oder Mela-Rezeptdatei (.melarecipe) und startest den Backtag.
 
 ## Grundprinzip
 
@@ -30,7 +30,7 @@ Eine Rezeptkarte zeigt Name, Brotart, geschmacksprägende Zutaten, Verfahrensmer
 
 - Backtag planen öffnet unmittelbar die zeitliche Planung und ist als wichtigste Aktion hervorgehoben.
 - Bearbeiten öffnet den Rezeptassistenten mit den vorhandenen Werten.
-- Das Aktionsmenü oben rechts bietet PDF-Anzeige und -Speicherung, Mela-Übergabe, Bearbeiten und Löschen.
+- Das Aktionsmenü oben rechts bietet PDF-Anzeige und -Speicherung, Export für Mela, Bearbeiten und Löschen.
 
 Über das Suchfeld oben rechts filterst du die gespeicherten Brote. **Neues Brotrezept** startet den Assistenten.
 
@@ -128,7 +128,7 @@ Wie der Dampf erzeugt wird, hängt vom Backofen und der eigenen Ausstattung ab. 
 
 ### PDF und Mela
 
-**PDF** erzeugt eine lesbare Rezeptfassung mit Zutaten, berechneten Mengen und Arbeitsablauf. Bei mehreren Broten nennt sie Anzahl, Fertiggewicht je Brot und die Portionierung des Gesamtteigs. Sauerteig, Sauerteigprüfung und ein vorhandenes Brüh- oder Quellstück erscheinen in ihrer tatsächlichen zeitlichen Reihenfolge. **Mela** übergibt dieselben berechneten Mengen und Anweisungen in einer für die Mela-Rezepte-App geeigneten Struktur. Dabei werden Roggen-, Weizen- und Dinkelsauerteig eindeutig bezeichnet. Prüfe nach dem Import, ob die Ziel-App alle Formatierungen wie erwartet übernommen hat.
+**PDF** erzeugt eine lesbare Rezeptfassung mit Zutaten, berechneten Mengen und Arbeitsablauf. Bei mehreren Broten nennt sie Anzahl, Fertiggewicht je Brot und die Portionierung des Gesamtteigs. Sauerteig, Sauerteigprüfung und ein vorhandenes Brüh- oder Quellstück erscheinen in ihrer tatsächlichen zeitlichen Reihenfolge. **Für Mela exportieren** erzeugt eine Mela-Rezeptdatei (.melarecipe) mit denselben berechneten Mengen und Anweisungen. Diese Datei kannst du anschließend in die Mela-Rezepte-App importieren. Dabei werden Roggen-, Weizen- und Dinkelsauerteig eindeutig bezeichnet. Prüfe nach dem Import, ob die Ziel-App alle Formatierungen wie erwartet übernommen hat.
 
 ### Zutatenstamm
 
