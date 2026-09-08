@@ -146,7 +146,17 @@ Das Menü **Standardwerte** kann fehlende mitgelieferte Zutaten ergänzen oder a
 
 Bei einer gewünschten Fertigstellung berücksichtigt die App neben dem Ruhefenster auch die aktuelle Uhrzeit. Müsste der Backtag für den gewählten Zeitpunkt bereits begonnen haben, erscheint eine Warnung und der Backtag kann so nicht gestartet werden. Das helle Vorschlagsfeld zeigt dann, wann du mit **so bald wie möglich** beginnen würdest und wann das Brot damit fertig wäre. Mit der Schaltfläche im Vorschlagsfeld übernimmst du genau diesen Modus; die obere Auswahl schaltet sichtbar um. Die zuvor gewählte Wunschzeit wird dabei verworfen und neu ab dem aktuellen Zeitpunkt geplant.
 
-Die Übersicht zeigt Beginn, Ende und alle Arbeitsschritte. Optional erstellt die App Erinnerungen auf dem Mac oder über den Kalender. Mit **Backtag starten** wird der angezeigte Plan als laufender Ablauf übernommen.
+Die Übersicht zeigt Beginn, Ende und alle Arbeitsschritte. Wenn du **Erinnerungen** einschaltest, sendet BrotBackstubb auf diesem Mac eine Mitteilung, sobald ein Arbeitsschritt beginnt. Über **Vorwarnung** kannst du zusätzlich festlegen, ob du 5, 10 oder 15 Minuten vorher benachrichtigt werden möchtest. Mit **Backtag starten** wird der angezeigte Plan als laufender Ablauf übernommen.
+
+> **Der Zeitplan bleibt aktuell:** Wenn sich während des Backtags Zeiten verschieben, ersetzt die App noch ausstehende Mitteilungen automatisch durch Mitteilungen mit den neuen Uhrzeiten. Es werden keine Kalendereinträge angelegt.
+
+#### Mitteilungen auf dem Mac zulassen
+
+Beim ersten Einschalten fragt macOS nach der Erlaubnis für Mitteilungen. Damit Hinweise sichtbar erscheinen, öffne bei Bedarf **Systemeinstellungen → Mitteilungen → BrotBackstubb**, aktiviere **Mitteilungen erlauben** und lasse **Schreibtisch** ausgewählt. Wenn Mitteilungen verzögert erscheinen, schalte **Mitteilungen zusammenfassen** für BrotBackstubb aus. Für einen Hinweiston muss außerdem **Ton für Mitteilung wiedergeben** aktiviert sein.
+
+![Empfohlene Mitteilungseinstellungen für BrotBackstubb in macOS](../de/images/notification-settings.png)
+
+**Hinweisstil:** Bei **Vorübergehend** verschwindet der Banner nach kurzer Zeit automatisch, bleibt aber in der Mitteilungszentrale erhalten - praktisch, falls du gerade nicht am Mac bist. Mit **Dauerhaft** bleibt der Banner auf dem Bildschirm, bis du ihn selbst schließt.
 
 ### Laufender Ablauf und Gesamt-Restzeit
 

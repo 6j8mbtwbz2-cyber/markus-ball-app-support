@@ -150,9 +150,17 @@ Open the Baking Day Planner on a recipe card. You can start as soon as possible 
 
 When choosing a completion time, the app considers the rest window and the current time. If the baking day has already begun at the selected time, a warning appears, and the baking day cannot be started. The bright suggestion field then shows when you could start as soon as possible and when the bread would be finished. You can take this mode directly by clicking the button in the suggestion field; the top selection changes visibly. The previously selected desired time is discarded and newly planned from the current time.
 
-The overview displays the start, end, and all steps. Optionally, the app creates reminders on Mac or calendar.
+The overview displays the start, end, and all steps. When you enable **Reminders**, BrotBackstubb sends a notification on this Mac whenever a work step begins. Under **Advance warning**, you can also choose to receive a notification 5, 10, or 15 minutes beforehand. With **Start Baking Day**, the displayed plan becomes the active schedule.
 
-With **Start Baking Day**, the displayed plan is taken as a running process.
+> **The schedule stays up to date:** If times shift during the baking day, the app automatically replaces pending notifications with notifications at the revised times. It does not create calendar events.
+
+#### Allow notifications on your Mac
+
+When you enable reminders for the first time, macOS asks for permission to send notifications. To make sure banners are visible, open **System Settings → Notifications → BrotBackstubb**, enable **Allow Notifications**, and keep **Desktop** selected. If notifications are delayed, turn off **Summarise notifications** for BrotBackstubb. For an audible alert, turn on **Play sound for notification**.
+
+![Recommended macOS notification settings for BrotBackstubb](../en/images/notification-settings.png)
+
+**Alert style:** With **Temporary**, the banner disappears automatically after a short time but remains available in Notification Centre - useful if you are away from your Mac. With **Persistent**, the banner stays on screen until you dismiss it.
 
 ### Running Process and Total Rest Time
 
