@@ -166,6 +166,14 @@ When you enable reminders for the first time, macOS asks for permission to send 
 
 At the top, **Total Rest Time** shows the remaining time until the bread is finished. It includes both your work and maturation, rest, cooking, and baking times. The progress bar refers to the planned work steps.
 
+#### Menu Bar Timer
+
+While a baking day is running, the round bread icon appears in the macOS menu bar. The time beside it counts down to the next outstanding work step. If no further work step remains, the menu bar instead shows the time remaining until the bread is finished.
+
+Click the menu bar item to open the compact baking-day display. It shows the current step first, followed by the next work step with its remaining duration and scheduled time, and then the total remaining time. Durations in this window are explicitly labelled in hours, minutes, and seconds. Choose **Show Baking Day** to return to the full interface.
+
+> **Display off, timer on:** While a baking day is running, BrotBackstubb prevents the Mac from entering automatic system sleep. The display may still turn off or be locked. Closing a MacBook lid or putting the Mac to sleep manually does cause real sleep; after wake, the app recalculates the remaining durations from the scheduled times. A notification that became due during sleep may therefore appear only after the Mac wakes.
+
 A pending work step shows the instruction on the left and the required ingredients on the right. After **Complete Work Step**, the actual waiting phase appears first. The next work step is only shown when its start time is reached.
 
 > **Parallel Exception:** While the sourdough matures, the water proof or brew proof can be added once its scheduled start time is reached. After that, the app again shows the waiting phase until the sourdough testing.
@@ -188,7 +196,7 @@ If the sourdough is not yet proofed, **Not Proofed · 30 Mins Longer** extends t
 | Skip Wait Time | Shorten only the currently running automatic waiting phase. This function is especially useful for testing the schedule. |
 | Plan View | Opens the full running plan. The timer continues. |
 
-**Close** asks if you are still in the middle of baking. You can minimize the window and let the timer continue, intentionally stop the baking day, or continue baking.
+**Close** asks if you are still in the middle of baking. With **Hide App · Timer Continues**, the window disappears completely and does not enter Stage Manager. The dot below the app icon in the Dock indicates that BrotBackstubb is still open, and the baking day also remains available from the menu bar. Alternatively, you can intentionally stop the baking day or continue baking. `⌘Q` and **Quit BrotBackstubb** also require confirmation while a baking day is active. Once the baking step is complete, the baking day is finished and the window closes without an abort warning.
 
 ### Learn Work Times
 

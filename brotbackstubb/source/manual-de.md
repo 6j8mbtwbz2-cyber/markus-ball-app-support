@@ -162,6 +162,14 @@ Beim ersten Einschalten fragt macOS nach der Erlaubnis für Mitteilungen. Damit 
 
 Oben zeigt **Gesamt-Restzeit** die verbleibende Zeit bis zum fertigen Brot. Sie umfasst sowohl deine Arbeit als auch Reife-, Ruhe-, Gar- und Backzeiten. Der Fortschrittsbalken bezieht sich auf die vorgesehenen Arbeitsschritte.
 
+#### Timer in der Menüleiste
+
+Während eines laufenden Backtags erscheint das runde Brotsymbol in der macOS-Menüleiste. Daneben zählt die Zeit bis zum nächsten noch ausstehenden Arbeitsschritt herunter. Gibt es keinen weiteren Arbeitsschritt, zeigt die Menüleiste stattdessen die verbleibende Zeit bis zum fertigen Brot.
+
+Ein Klick auf das Menüleistensymbol öffnet die kompakte Backtag-Anzeige. Sie nennt zuerst den aktuellen Schritt, danach den nächsten Arbeitsschritt mit Restdauer und geplanter Uhrzeit sowie die Gesamt-Restzeit. Zeitspannen werden dort ausdrücklich mit Stunden, Minuten und Sekunden bezeichnet. Mit **Backtag anzeigen** kehrst du zur vollständigen Oberfläche zurück.
+
+> **Display aus, Timer an:** Während der Backtag läuft, verhindert BrotBackstubb den automatischen Ruhezustand des Macs. Das Display darf sich trotzdem ausschalten oder gesperrt werden. Beim Zuklappen eines MacBooks oder bei einem manuell ausgelösten Ruhezustand schläft der Mac tatsächlich; nach dem Aufwachen berechnet die App die Restzeiten aus den geplanten Uhrzeiten neu. Eine während des Ruhezustands fällige Mitteilung kann deshalb erst nach dem Aufwachen erscheinen.
+
 Ein fälliger Arbeitsschritt zeigt links die Anweisung und rechts die dafür benötigten Zutaten. Nach **Arbeitsschritt abschließen** erscheint zunächst die tatsächlich laufende Wartephase. Der nächste Arbeitsschritt wird erst angezeigt, wenn seine Startzeit erreicht ist.
 
 > **Parallele Ausnahme:** Während der Sauerteig reift, kann das Quell- oder Brühstück angesetzt werden, sobald dessen geplante Startzeit erreicht ist. Danach zeigt die App wieder die Wartephase bis zur Sauerteigprüfung.
@@ -182,7 +190,7 @@ Nach Ablauf der fünf Minuten bleibt die Prüfung geöffnet und die App springt 
 | Wartezeit überspringen | Verkürzt nur die gerade laufende automatische Wartephase. Diese Funktion ist besonders zum Testen des Ablaufs gedacht. |
 | Planung anzeigen | Öffnet den vollständigen laufenden Plan. Der Timer läuft weiter. |
 
-**Schließen** fragt bei einem laufenden Backtag nach. Du kannst das Fenster minimieren und den Timer weiterlaufen lassen, den Backtag bewusst abbrechen oder weiterbacken.
+**Schließen** fragt bei einem laufenden Backtag nach. Mit **App ausblenden · Timer läuft weiter** verschwindet das Fenster vollständig und landet nicht im Stage Manager. Der weiße Punkt unter dem App-Symbol im Dock zeigt, dass BrotBackstubb weiterhin geöffnet ist; der Backtag bleibt außerdem in der Menüleiste erreichbar. Alternativ kannst du den Backtag bewusst abbrechen oder weiterbacken. Auch `⌘Q` beziehungsweise **BrotBackstubb beenden** verlangt während eines laufenden Backtags eine Bestätigung. Nach dem Abschluss des Backschritts ist der Backtag beendet und das Fenster kann ohne Abbruchwarnung geschlossen werden.
 
 ### Arbeitszeiten lernen
 
