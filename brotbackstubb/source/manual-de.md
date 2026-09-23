@@ -10,7 +10,7 @@ schema: brotbackstubb-manual-v1
 
 ## Überblick
 
-BrotBackstubb unterstützt dich beim Erstellen, Berechnen und zeitlichen Durchführen frei geschobener Brote. Die App berechnet Zutatenmengen aus dem gewünschten Brotgewicht, berücksichtigt die Wasseraufnahme der ausgewählten Mehle sowie das Wasser von Brüh- und Quellstücken und führt dich am Backtag Schritt für Schritt durch das Rezept.
+BrotBackstubb unterstützt dich auf Mac und iPad beim Erstellen, Berechnen und zeitlichen Durchführen frei geschobener Brote. Die App berechnet Zutatenmengen aus dem gewünschten Brotgewicht, berücksichtigt die Wasseraufnahme der ausgewählten Mehle sowie das Wasser von Brüh- und Quellstücken und führt dich am Backtag Schritt für Schritt durch das Rezept.
 
 Alle Rezepte erscheinen auf der Startseite **Meine Brote**. Von dort erstellst du ein Rezept, bearbeitest ein vorhandenes Rezept, erzeugst eine PDF- oder Mela-Rezeptdatei (.melarecipe) und startest den Backtag.
 
@@ -30,13 +30,27 @@ Eine Rezeptkarte zeigt Name, Brotart, geschmacksprägende Zutaten, Verfahrensmer
 
 - Backtag planen öffnet unmittelbar die zeitliche Planung und ist als wichtigste Aktion hervorgehoben.
 - Bearbeiten öffnet den Rezeptassistenten mit den vorhandenen Werten.
-- Das Aktionsmenü oben rechts bietet PDF-Anzeige und -Speicherung, Export für Mela, Bearbeiten und Löschen.
+- Das Aktionsmenü oben rechts bietet **Zur Einkaufsliste hinzufügen**, PDF-Anzeige und -Speicherung, Export für Mela, Bearbeiten und Löschen.
 
 Über das Suchfeld oben rechts filterst du die gespeicherten Brote. **Neues Brotrezept** startet den Assistenten.
 
 ### Mein Anstellgut
 
 Die eigene Karte **Mein Anstellgut** berechnet Roggenmehl, Wasser und Wassertemperatur für die gewünschte Anstellgutmenge. Sie gehört nicht zu einem einzelnen Brotrezept und kann jederzeit geöffnet werden.
+
+Im Kartenmenü kannst du die Zutaten für **Anstellgut herstellen** oder **Anstellgut weiterführen** getrennt zur Einkaufsliste hinzufügen. Beim Herstellen zählen Starterkulturen als Einkaufszutat; vorhandenes aktives Anstellgut wird nicht als fertig zu kaufender Artikel vorausgesetzt.
+
+## Einkaufsliste und Erinnerungen
+
+Wähle im Menü einer oder mehrerer Rezeptkarten **Zur Einkaufsliste hinzufügen**. Die Auswahl wird in BrotBackstubb gesammelt; sie gehört nicht zur zeitlichen Backtag-Planung. Öffne oben in **Meine Brote** die **Einkaufsliste**, um die Zutaten vor der Übertragung zu prüfen.
+
+Gleiche Zutaten aus verschiedenen Rezepten und Rezeptteilen erscheinen nur einmal mit ihrer Gesamtmenge. Die Reihenfolge in BrotBackstubb ist **Mehle**, **Schrot**, **Körner, Saaten & Nüsse** und **Weitere Zutaten**. Entferne ein Rezept über das Kreuz am Rezeptnamen oder verwende **Liste leeren**, um den Sammelkorb für eine neue Einkaufsrunde zurückzusetzen. Das Leeren des Sammelkorbs löscht keine Einträge in der App „Erinnerungen“.
+
+Mit dem Häkchen wählst du, ob eine Zutat gekauft werden soll. In **Vorrat** trägst du vorhandene Gramm ein; BrotBackstubb berechnet **Einkaufen = benötigt − Vorrat**, mindestens jedoch 0 g. Wasser und aktives Anstellgut sind zunächst abgewählt, können aber bei Bedarf angehakt werden. Starterkulturen beim Herstellen von Anstellgut sind zunächst ausgewählt; bei Trockenpulver gilt die Herstellerangabe statt der angezeigten Menge aktiver Kulturen.
+
+Wähle vor **In Erinnerungen speichern** die **Zielliste**: „BrotBackstubb Einkauf“ (Standard) oder eine bereits vorhandene Liste „Einkäufe“. Beim nächsten Export in dieselbe Zielliste aktualisiert BrotBackstubb seine noch offenen Zutaten und entfernt dort nicht mehr benötigte, von BrotBackstubb angelegte Einträge. Persönliche Erinnerungen bleiben unangetastet; andere Ziellisten werden nicht bereinigt. Die Zutaten werden zuerst in BrotBackstubb zusammengeführt – in Erinnerungen entstehen deshalb keine Dopplungen durch mehrere Rezeptteile.
+
+Die Sortierung in Erinnerungen kann von der Reihenfolge in BrotBackstubb abweichen. Auf unterstützten Geräten kannst du in Erinnerungen für „BrotBackstubb Einkauf“ einmal **Automatisch kategorisieren** einschalten. Diese Einstellung kann BrotBackstubb nicht selbst aktivieren. Die spezielle Liste „Einkäufe“ ordnet Artikel nach Supermarktkategorien ein; dabei kann Mehl auch in unterschiedlichen Kategorien landen.
 
 ## Ein Rezept erstellen
 
@@ -162,7 +176,7 @@ Beim ersten Einschalten fragt macOS nach der Erlaubnis für Mitteilungen. Damit 
 
 Oben zeigt **Gesamt-Restzeit** die verbleibende Zeit bis zum fertigen Brot. Sie umfasst sowohl deine Arbeit als auch Reife-, Ruhe-, Gar- und Backzeiten. Der Fortschrittsbalken bezieht sich auf die vorgesehenen Arbeitsschritte.
 
-#### Timer in der Menüleiste
+#### Mac: Timer in der Menüleiste
 
 Während eines laufenden Backtags erscheint das runde Brotsymbol in der macOS-Menüleiste. Daneben zählt die Zeit bis zum nächsten noch ausstehenden Arbeitsschritt herunter. Gibt es keinen weiteren Arbeitsschritt, zeigt die Menüleiste stattdessen die verbleibende Zeit bis zum fertigen Brot.
 
@@ -209,7 +223,17 @@ Beim Hauptteig zeigt die Zutatenliste die berechnete Wassertemperatur. In die Be
 
 Nach dem Kneten kannst du tatsächliche Knetdauer und gemessene Teigtemperatur auswerten. Die daraus ermittelte Kneterwärmung wird nur nach Bestätigung gespeichert und nur bei einer vergleichbaren Knetdauer wiederverwendet. Für neue Rezepte dienen zunächst die hinterlegten Standardtemperaturen als Ausgangspunkt.
 
+### iPad: Sperrbildschirm und Live-Aktivität
+
+Auf dem iPad zeigt eine **Live-Aktivität** während eines laufenden Backtags Rezeptname, aktuellen und nächsten Schritt sowie die verbleibende Zeit auf dem Sperrbildschirm. Sie startet nur, wenn Live-Aktivitäten für BrotBackstubb in **Einstellungen → Apps → BrotBackstubb → Live-Aktivitäten** zugelassen sind. Die Anzeige ist eine Orientierung; für fällige Arbeitsschritte bleiben die gesonderten Mitteilungen wichtig. Wenn du den Backtag in der App beendest, endet auch die Live-Aktivität.
+
+Die Live-Aktivität verwendet geplante Uhrzeiten für ihren Countdown. Beim Wechsel zurück in die App wird der aktuelle Backtag angezeigt; Änderungen an Schritten und Zeiten werden dann in die Live-Aktivität übernommen. Anders als auf dem Mac gibt es auf dem iPad keinen Timer in einer Menüleiste. Die Bedienung des Backtags selbst erfolgt in der App.
+
 ## Daten und Hilfe
+
+### Hilfe auf Mac und iPad
+
+Auf dem Mac öffnet **Hilfe → BrotBackstubb Hilfe** das Handbuch in einem eigenen Fenster. Auf dem iPad findest du **BrotBackstubb Hilfe** im Menü mit den drei Punkten auf **Meine Brote**; dort wird das gemeinsame Online-Handbuch geöffnet. Für die iPad-Hilfe ist deshalb eine Internetverbindung erforderlich.
 
 ### Versionen, Papierkorb und Datensicherung
 
@@ -239,4 +263,4 @@ Nein. Solche Sauerteige sind grundsätzlich möglich, benötigen aber jeweils ei
 Ja. Warnungen machen auf Abweichungen von den Empfehlungen für frei geschobene Brote aufmerksam, lassen begründete Sonderfälle aber zu.
 
 **Wo finde ich dieses Handbuch?**  
-Im Menü **Hilfe → BrotBackstubb Hilfe** oder mit `⌘?`.
+Auf dem Mac im Menü **Hilfe → BrotBackstubb Hilfe** oder mit `⌘?`; auf dem iPad im Menü mit den drei Punkten auf **Meine Brote**.

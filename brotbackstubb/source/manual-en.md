@@ -10,7 +10,7 @@ schema: brotbackstubb-manual-v1
 
 ## Overview
 
-Bread Calculator supports you in creating, calculating, and scheduling free-form breads. The app calculates ingredient quantities from the desired bread weight, considers the water absorption of the selected flours, and the water from the brewing and quenching pieces, and guides you through the recipe step-by-step on the baking day.
+BrotBackstubb supports you on Mac and iPad in creating, calculating, and scheduling free-form breads. The app calculates ingredient quantities from the desired bread weight, considers the water absorption of the selected flours and the water used in scalds and soakers, and guides you step by step on baking day.
 
 All recipes appear on the **My Loaves** homepage. From there, you can create a recipe, edit an existing recipe, create a PDF or Mela recipe file (.melarecipe), and start the baking day.
 
@@ -30,13 +30,27 @@ A recipe card displays the name, bread type, flavor-influencing ingredients, pro
 
 - Plan Bake Day opens the temporal planning immediately and is emphasized as the most important action.
 - Edit opens the recipe assistant with the existing values.
-- The action menu at the top right offers PDF display and storage, export for Mela, edit, and delete.
+- The action menu at the top right offers **Add to Shopping List**, PDF viewing and saving, export for Mela, editing, and deletion.
 
 Using the search bar at the top right, you filter the saved breads. **New Bread Recipe** starts the assistant.
 
 ### My Setup
 
 Your own card **My Setup** calculates rye flour, water, and water temperature for the desired setup quantity. It is not part of a single bread recipe and can be opened at any time.
+
+From its card menu, you can add ingredients for **Make Starter** and **Feed Starter** separately to the shopping list. Making starter includes starter cultures as a shopping item; existing active starter is not assumed to be a ready-made product to buy.
+
+## Shopping List and Reminders
+
+Choose **Add to Shopping List** from one or more recipe cards. BrotBackstubb collects the recipes separately from the baking-day schedule. Open **Shopping List** at the top of **My Loaves** to check the ingredients before exporting.
+
+The same ingredient from several recipes or recipe stages appears only once with its combined quantity. BrotBackstubb groups ingredients as **Flours**, **Crushed Grains**, **Seeds & Nuts**, and **Other Ingredients**. Remove a recipe with the cross next to its name, or use **Clear List** to reset the collection for a new shopping trip. Clearing it in BrotBackstubb does not remove items from Apple Reminders.
+
+Use each checkbox to choose whether to buy an ingredient. Enter the amount you already have, in grams, under **In Pantry**; **To Buy** is the required amount minus the pantry amount, never below zero. Water and active starter are deselected initially but can be included. Starter cultures for making starter are selected initially; for dry cultures, follow the manufacturer's directions rather than the displayed active-culture quantity.
+
+Before **Save to Reminders**, choose a **Destination List**: “BrotBackstubb Einkauf” (default) or an existing “Einkäufe” list. A later export to the same destination updates BrotBackstubb's open ingredient reminders and removes its no-longer-needed items there. Your personal reminders remain untouched, as do other destination lists. Ingredients are combined in BrotBackstubb first, so multiple recipe stages do not create duplicates in Reminders.
+
+Reminders may display a different order from BrotBackstubb. On supported devices, you can turn on **Auto-Categorize** once for the “BrotBackstubb Einkauf” list in Reminders. BrotBackstubb cannot enable this setting itself. The special “Einkäufe” grocery list groups items by supermarket category, which can place different flours in different categories.
 
 ## Create a Recipe
 
@@ -166,7 +180,7 @@ When you enable reminders for the first time, macOS asks for permission to send 
 
 At the top, **Total Rest Time** shows the remaining time until the bread is finished. It includes both your work and maturation, rest, cooking, and baking times. The progress bar refers to the planned work steps.
 
-#### Menu Bar Timer
+#### Mac: Menu Bar Timer
 
 While a baking day is running, the round bread icon appears in the macOS menu bar. The time beside it counts down to the next outstanding work step. If no further work step remains, the menu bar instead shows the time remaining until the bread is finished.
 
@@ -215,7 +229,17 @@ For the main dough, the ingredients list shows the calculated water temperature.
 
 After kneading, you can evaluate the actual kneading duration and measured dough temperature. The resulting kneading warmth is only saved and reused if the same kneading duration is reached again. For new recipes, the default temperatures are initially used as a starting point.
 
+### iPad: Lock Screen and Live Activity
+
+On iPad, a **Live Activity** can show the recipe name, current and next step, and remaining time on the Lock Screen during a baking day. It appears only if Live Activities are allowed for BrotBackstubb in **Settings → Apps → BrotBackstubb → Live Activities**. Use it as an overview; separate notifications remain important for steps requiring attention. Ending the baking day in the app also ends the Live Activity.
+
+Its countdown uses scheduled times. When you return to the app, you can open the active baking day; changes to steps and times are then passed to the Live Activity. Unlike the Mac, the iPad has no menu bar timer. Baking-day controls remain in the app.
+
 ## Data and Help
+
+### Help on Mac and iPad
+
+On Mac, **Help → BrotBackstubb Help** opens the manual in its own window. On iPad, choose **BrotBackstubb Help** from the three-dot menu on **My Loaves** to open this shared online manual. The iPad help therefore requires an internet connection.
 
 ### Versions, Trash Bin, and Data Backup
 
@@ -245,4 +269,4 @@ No. Such sourdoughs are generally possible but require their own professionally 
 Yes. Warnings alert you to deviations from recommendations for free-rise breads but allow for justified exceptions.
 
 **Where can I find this manual?**  
-In the **Help → BrotBackstubb Help** menu or by pressing `⌘?`.
+On Mac, choose **Help → BrotBackstubb Help** or press `⌘?`; on iPad, use the three-dot menu on **My Loaves**.
