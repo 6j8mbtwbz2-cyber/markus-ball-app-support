@@ -58,7 +58,9 @@ Apple XDR displays are particularly suitable, for example:
 
 Compatible HDR displays from other manufacturers can also present the HDR effect. The brightness and visible dynamic range actually achieved depend on the display, connection, macOS display settings, and the application being used.
 
-On an SDR display or in an application without gain map support, only the SDR base image appears. This is intentional and does not mean that HDR data has been lost.
+On an SDR display, when HDR output with an active HDR boost is selected, GeniusHDR shows no preview image in **HDR**, **HDR Effect**, and **Comparison**. Instead, it displays **No HDR Preview**. The **SDR** view remains available. Images can still be edited and exported on an SDR display; to evaluate the HDR effect, move the Studio window to an HDR/EDR-capable display.
+
+When an exported file is viewed on an SDR display or in another application without gain map support, the SDR base image is normally shown. This does not mean that HDR data has been lost.
 
 <a id="section-08-key-terms"></a>
 ## Key Terms
@@ -121,12 +123,14 @@ The filmstrip along the bottom of the window shows all loaded images as thumbnai
 
 After an export, an image can be dimmed, marked with a green checkmark, or removed from the filmstrip, depending on the setting. This marking does not modify any file.
 
+**Closing and reopening the window:** The red close button closes only the Studio window. The filmstrip, selection, and individual editing values remain available during the current app session. Use the app icon or **Open Studio** in the menu bar to continue working; the window and preview are rebuilt. To clear the filmstrip, use the trash button. This also cancels ongoing imports; exports already running may finish. When you quit the app completely, the image list is not saved for the next session. If an import or export is still running, the app asks before quitting.
+
 <a id="section-14-multiple-selection"></a>
 ## Multiple Selection
 
 Hold down the Command key to add individual images to the selection or remove them from it. Use the Shift key to select a contiguous range. The toolbar shows the number of selected images.
 
-Changes to the HDR controls apply to the current multiple selection. **Export** processes all selected images using their respective settings.
+Manual changes to HDR controls apply to the current multiple selection. **Automatic** instead calculates individual values from each selected image’s scene analysis. The automation strength control also adjusts each image relative to its own automatic baseline. **Export** processes all selected images using their respective settings.
 
 <a id="section-15-existing-gain-maps-and-finished-hdr-images"></a>
 ## Existing Gain Maps and Finished HDR Images
@@ -146,6 +150,8 @@ The output formats have different size limits. Any image whose dimensions exceed
 ## Scene-Aware Automation
 
 When an image is imported, GeniusHDR analyzes the subject and determines neutral starting values. The **Automatic** control shifts this baseline between **subtle**, **automatic**, and **strong**.
+
+The **Automatic** button restores neutral scene-aware settings. When several images are selected, it uses each image’s individual analysis; the focused image’s values are not copied to the others.
 
 Scene-aware automation is a starting point, not an assessment of the photograph. Review especially bright areas afterward using the preview and diagnostics.
 
@@ -189,12 +195,14 @@ Resetting affects only the relevant editing value and does not modify the origin
 
 During the session, GeniusHDR stores editing values separately for each image. When you switch images in the filmstrip, the associated values are restored.
 
-For a multiple selection, new control values are applied to all selected images. Review individual images afterward if their subjects differ substantially.
+For a multiple selection, manually chosen HDR control values are applied to all selected images. Scene-aware automation and its strength control continue to use each image’s individual analysis. Review individual images afterward if their subjects differ substantially.
 
 <a id="section-24-sdr-and-hdr-preview"></a>
 ## SDR and HDR Preview
 
 **SDR** shows the unamplified source image. **HDR** shows the reconstructed HDR result GeniusHDR creates for the current settings. On a compatible display, this is the most important view for evaluation.
+
+On an SDR display, the HDR preview is unavailable while an HDR boost is active; the app displays **No HDR Preview**. Switch to **SDR** to see the source image, or move the window to an HDR/EDR-capable display. For standard JPEG without a gain map, the output view shows the SDR result.
 
 The HDR preview is a color-managed EDR presentation. It does not guarantee that every other application will use the same maximum brightness.
 
@@ -327,6 +335,8 @@ Set image quality in the main window under **Output Format → More Output Optio
 
 When size reduction is necessary, the gain map remains pixel-matched to the reduced base image.
 
+HDR output requires at least 8 × 8 pixels. For smaller images, the app offers standard JPEG without a gain map. At 0 EV, Apple-based HDR output has no HDR boost; the app therefore offers standard JPEG, or you can cancel and increase HDR brightness. A job with a size warning retains its original images and settings even if you change the selection in the meantime.
+
 <a id="section-39-destination-folder-and-subfolder-structure"></a>
 ## Destination Folder and Subfolder Structure
 
@@ -409,6 +419,8 @@ Review the latest background activity regularly. Successful automation replaces 
 
 <a id="section-49-folders"></a>
 ## Folders
+
+Under **Photo Folder for Preliminary Checks**, authorize a photo folder once. The app saves read access to this folder and its subfolders. Detected HDR/gain-map files there can be grayed out in the import dialog, which starts in this folder. Outside the authorized folder, selected files are reliably checked during import. Use **Remove Authorization** to remove the saved authorization.
 
 In the **Folders** tab, configure the destination structure, destination prompt, and behavior after manual exports. Choose the default output folder from the menu bar icon or when prompted for a destination.
 
@@ -526,6 +538,8 @@ The app does not upload images to an online service for HDR processing. Completi
 
 Copyright © 2026 Markus Ball. All rights reserved.
 
-GeniusHDR GainMap Studio uses Google's Ultra HDR reference codec (**libultrahdr**) for **HDR JPEG (ISO 21496-1)**. **libjpeg-turbo** is additionally used for JPEG compression within this processing path. The associated license texts are included in the project or application distribution.
+GeniusHDR GainMap Studio uses Google's Ultra HDR reference codec (**libultrahdr**) for **HDR JPEG (ISO 21496-1)**. **libjpeg-turbo** is additionally used for JPEG compression within this processing path. The associated license texts are bundled with the app and accessible in the app’s help window under “Third-Party License Texts”.
+
+This software is based in part on the work of the Independent JPEG Group.
 
 The Apple-compatible output formats, previews, and image processing use macOS system technologies, including ImageIO, Core Image, and Metal. These Apple system frameworks are not third-party components of the app. Apple, macOS, HEIF, and other product names are trademarks of their respective owners.

@@ -58,7 +58,9 @@ Besonders geeignet sind Apples XDR-Displays, beispielsweise:
 
 Auch kompatible HDR-Displays anderer Hersteller können die HDR-Wirkung darstellen. Die tatsächlich erreichbare Helligkeit und der sichtbare Dynamikumfang hängen vom Display, der Verbindung, den macOS-Displayeinstellungen und der verwendeten Anwendung ab.
 
-Auf einem SDR-Display oder in einer Anwendung ohne Gain-Map-Unterstützung erscheint lediglich das SDR-Grundbild. Das ist beabsichtigt und bedeutet nicht, dass HDR-Daten verloren gegangen sind.
+Auf einem SDR-Monitor zeigt GeniusHDR bei gewählter HDR-Ausgabe mit aktiver HDR-Anhebung in den Ansichten **HDR**, **HDR-Wirkung** und **Vergleich** kein Vorschaubild. Stattdessen erscheint **Keine HDR-Vorschau**. Die **SDR**-Ansicht bleibt verfügbar. Bilder können auch auf einem SDR-Monitor bearbeitet und exportiert werden; zur Beurteilung der HDR-Wirkung verschiebe das Studiofenster auf ein HDR-/EDR-fähiges Display.
+
+Bei der Wiedergabe einer exportierten Datei auf einem SDR-Display oder in einer anderen Anwendung ohne Gain-Map-Unterstützung erscheint gewöhnlich das SDR-Grundbild. Das bedeutet nicht, dass HDR-Daten verloren gegangen sind.
 
 <a id="section-08-key-terms"></a>
 ## Wichtige Begriffe
@@ -121,12 +123,14 @@ Die Bilderleiste am unteren Fensterrand zeigt alle geladenen Bilder als Miniatur
 
 Nach einem Export kann ein Bild abhängig von der Einstellung ausgegraut, mit einem grünen Haken markiert oder aus der Bilderleiste entfernt werden. Die Kennzeichnung verändert keine Datei.
 
+**Fenster schließen und wieder öffnen:** Der rote Schließen-Knopf schließt nur das Studiofenster. Bilderleiste, Auswahl und individuelle Bearbeitungswerte bleiben während der laufenden App-Sitzung erhalten. Über das App-Symbol oder **Studio öffnen** in der Menüleiste kannst du weiterarbeiten; das Fenster und die Vorschau werden neu aufgebaut. Zum Leeren der Bilderleiste verwende den Papierkorb. Dabei werden auch laufende Importe abgebrochen; bereits laufende Exporte dürfen fertig werden. Beim vollständigen Beenden der App wird die Bilderliste nicht für die nächste Sitzung gespeichert. Läuft noch ein Import oder Export, fragt die App vor dem Beenden nach.
+
 <a id="section-14-multiple-selection"></a>
 ## Mehrfachauswahl
 
 Mit gedrückter Befehlstaste fügst du einzelne Bilder zur Auswahl hinzu oder entfernst sie daraus. Mit der Umschalttaste wählst du einen zusammenhängenden Bereich. Die Werkzeugleiste zeigt die Anzahl der ausgewählten Bilder.
 
-Änderungen an den HDR-Reglern gelten für die aktuelle Mehrfachauswahl. **Exportieren** verarbeitet alle ausgewählten Bilder mit ihren jeweiligen Einstellungen.
+Manuelle Änderungen an den HDR-Reglern gelten für die aktuelle Mehrfachauswahl. **Automatisch** berechnet dagegen für jedes markierte Bild eigene Werte aus seiner Motivbewertung. Auch der Automatik-Stärkeregler passt jedes Bild relativ zu seiner eigenen Motivautomatik an. **Exportieren** verarbeitet alle ausgewählten Bilder mit ihren jeweiligen Einstellungen.
 
 <a id="section-15-existing-gain-maps-and-finished-hdr-images"></a>
 ## Vorhandene Gain Maps und fertige HDR-Bilder
@@ -146,6 +150,8 @@ Die Ausgabeformate besitzen unterschiedliche Größenbegrenzungen. Davon kann je
 ## Motivautomatik
 
 Beim Import analysiert GeniusHDR das Motiv und bestimmt neutrale Ausgangswerte. Der Regler **Automatisch** verschiebt diese Grundeinstellung zwischen **zurückhaltend**, **automatisch** und **kräftig**.
+
+Die Schaltfläche **Automatisch** stellt die neutrale Motivautomatik wieder her. Bei mehreren markierten Bildern verwendet sie die individuelle Analyse jedes Bildes; die Werte des gerade angezeigten Bildes werden nicht auf die übrigen Bilder kopiert.
 
 Die Motivautomatik ist ein Ausgangspunkt, keine Bewertung des Fotos. Prüfe besonders helle Flächen anschließend mit Vorschau und Diagnose.
 
@@ -189,12 +195,14 @@ Das Zurücksetzen betrifft nur den jeweiligen Bearbeitungswert und verändert ni
 
 GeniusHDR speichert die Bearbeitungswerte während der Sitzung für jedes Bild getrennt. Beim Wechsel in der Bilderleiste werden die zugehörigen Werte wiederhergestellt.
 
-Bei einer Mehrfachauswahl werden neue Reglerwerte auf alle ausgewählten Bilder übertragen. Prüfe danach einzelne Bilder, wenn die Motive stark voneinander abweichen.
+Bei einer Mehrfachauswahl werden manuell eingestellte HDR-Reglerwerte auf alle ausgewählten Bilder übertragen. Motivautomatik und Automatik-Stärkeregler berücksichtigen dagegen weiterhin die individuelle Analyse jedes Bildes. Prüfe danach einzelne Bilder, wenn die Motive stark voneinander abweichen.
 
 <a id="section-24-sdr-and-hdr-preview"></a>
 ## SDR- und HDR-Vorschau
 
 **SDR** zeigt das unverstärkte Ausgangsbild. **HDR** zeigt das rekonstruierte HDR-Ergebnis, das GeniusHDR für die aktuelle Einstellung erzeugt. Auf einem geeigneten Display ist dies die wichtigste Beurteilungsansicht.
+
+Auf einem SDR-Monitor ist die HDR-Vorschau bei aktiver HDR-Anhebung gesperrt; die App zeigt **Keine HDR-Vorschau**. Wechsle zu **SDR**, um das Ausgangsbild zu sehen, oder verschiebe das Fenster auf ein HDR-/EDR-fähiges Display. Bei Standard-JPEG ohne Gain Map zeigt die Ausgabeansicht das SDR-Ergebnis.
 
 Die HDR-Vorschau ist eine farbverwaltete EDR-Darstellung. Sie ist keine Garantie dafür, dass jede andere Anwendung dieselbe maximale Helligkeit verwendet.
 
@@ -327,6 +335,8 @@ Die Bildqualität stellst du im Hauptfenster unter **Ausgabeformat → Weitere A
 
 Bei einer notwendigen Verkleinerung bleibt die Gain Map pixelgleich zur verkleinerten Grunddarstellung.
 
+HDR-Ausgaben benötigen mindestens 8 × 8 Pixel. Bei kleineren Bildern bietet die App Standard-JPEG ohne Gain Map an. Bei 0 EV enthalten die Apple-basierten HDR-Ausgaben keine HDR-Anhebung; die App bietet deshalb Standard-JPEG an oder du brichst ab und erhöhst die HDR-Leuchtkraft. Ein Auftrag mit Größenwarnung behält seine ursprünglichen Bilder und Einstellungen, auch wenn du zwischenzeitlich die Auswahl änderst.
+
 <a id="section-39-destination-folder-and-subfolder-structure"></a>
 ## Zielordner und Unterordnerstruktur
 
@@ -409,6 +419,8 @@ Kontrolliere regelmäßig die letzte Hintergrundaktivität. Eine erfolgreiche Au
 
 <a id="section-49-folders"></a>
 ## Ordner
+
+Unter **Fotoordner für Vorprüfung** kannst du einen Fotoordner einmal freigeben. Die App speichert eine Lesefreigabe für diesen Ordner einschließlich seiner Unterordner. Dort können erkannte HDR-/Gain-Map-Dateien bereits im Importdialog ausgegraut werden. Der Importdialog startet in diesem Ordner. Außerhalb dieser Freigabe werden die ausgewählten Dateien erst beim Import zuverlässig geprüft. Über **Freigabe entfernen** kannst du die gespeicherte Freigabe zurücknehmen.
 
 Im Register **Ordner** legst du Zielstruktur, Zieldialog und das Verhalten nach normalen Exporten fest. Den Standard-Ausgabeordner wählst du über das Menüleistensymbol beziehungsweise bei der Zielordnerabfrage.
 
@@ -526,6 +538,8 @@ Die App lädt Bilder nicht für die HDR-Verarbeitung in einen Onlinedienst. Absc
 
 Copyright © 2026 Markus Ball. Alle Rechte vorbehalten.
 
-GeniusHDR GainMap Studio verwendet für **HDR-JPEG (ISO 21496-1)** den von Google bereitgestellten Ultra-HDR-Referenzcodec (**libultrahdr**). Für die JPEG-Komprimierung dieses Verarbeitungswegs wird außerdem **libjpeg-turbo** eingesetzt. Die zugehörigen Lizenztexte sind Bestandteil des Projekts beziehungsweise der Programmdistribution.
+GeniusHDR GainMap Studio verwendet für **HDR-JPEG (ISO 21496-1)** den von Google bereitgestellten Ultra-HDR-Referenzcodec (**libultrahdr**). Für die JPEG-Komprimierung dieses Verarbeitungswegs wird außerdem **libjpeg-turbo** eingesetzt. Die zugehörigen Lizenztexte werden mit der App ausgeliefert und sind im Hilfefenster der App unter „Drittanbieter-Lizenztexte“ zugänglich.
+
+This software is based in part on the work of the Independent JPEG Group.
 
 Die Apple-kompatiblen Ausgabeformate sowie Vorschau und Bildverarbeitung verwenden Systemtechnologien von macOS, darunter ImageIO, Core Image und Metal. Diese Apple-Systemframeworks sind keine Drittanbieter-Komponenten der App. Apple, macOS, HEIF und weitere Produktnamen sind Marken ihrer jeweiligen Inhaber.
