@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Markus Ball – Mac Apps &amp; Support</title>
+  <title>Markus Ball – Apps &amp; Support</title>
 
   <link rel="prefetch" href="../photocapturetime/assets/photocapturetime-logo.png" as="image">
   <link rel="prefetch" href="../fotostackimporter/assets/fotostackimporter-logo.png" as="image">
@@ -67,7 +67,7 @@
     main { padding: 30px clamp(18px, 3.8vw, 58px) 18px; }
     .apps {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 16px;
     }
     .card {
@@ -109,7 +109,7 @@
       text-align: center;
     }
     .summary {
-      min-height: 48px;
+      min-height: 72px;
       margin: 0 0 14px;
       color: var(--muted);
       text-align: center;
@@ -182,7 +182,10 @@
       color: #82909d;
       font-size: 13px;
     }
-    @media (max-width: 1050px) {
+    @media (max-width: 1250px) {
+      .apps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    @media (max-width: 950px) {
       .apps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 650px) {
@@ -194,7 +197,7 @@
     }
   </style>
 
-<meta name="description" content="Mac apps by Markus Ball: FotoStack Importer for photo import, focus and HDR sequences, plus user manuals, help and support for all apps.">
+<meta name="description" content="Apps for Mac, iPhone and iPad by Markus Ball: FotoStack Importer for photo import, focus and HDR sequences, plus user manuals, help and support for all apps.">
 <link rel="canonical" href="https://6j8mbtwbz2-cyber.github.io/markus-ball-app-support/en/">
 <link rel="alternate" hreflang="de" href="https://6j8mbtwbz2-cyber.github.io/markus-ball-app-support/">
 <link rel="alternate" hreflang="en" href="https://6j8mbtwbz2-cyber.github.io/markus-ball-app-support/en/">
@@ -256,6 +259,13 @@
             <li><span class="feature-icon">▦</span>Precise calculations</li>
             <li><span class="feature-icon">▣</span>Plan the perfect baking day</li>
           </ul>
+        </article>
+        <article class="card">
+          <div class="logo-frame"><img class="logo" style="border-radius:16px" src="../localcastaudio/assets/localcast-audio-logo.jpg" alt="LocalCast Audio"></div>
+          <h2>LocalCast Audio</h2>
+          <p class="summary">Music on your local network<br>for Mac, iPhone and iPad.</p>
+          <a class="manual" href="../localcastaudio/en/"><span class="book" aria-hidden="true">▱</span><span>Help &amp; quick start</span><span class="arrow" aria-hidden="true">›</span></a>
+          <ul class="features"><li><span class="feature-icon" aria-hidden="true">♫</span>FRITZ!Box &amp; local music</li><li><span class="feature-icon" aria-hidden="true">♫</span>AirPlay &amp; Yamaha rooms</li><li><span class="feature-icon" aria-hidden="true">♫</span>Playlists &amp; offline music</li></ul>
         </article>
       </section>
 
